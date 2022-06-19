@@ -9,7 +9,9 @@ const port = 8000;
 app.listen(port, (req, res) => console.log("iniciando servidor en el puerto " + port))
 
 //Middlewares
-app.use(express.static("public"));
+//app.use(express.static("public"));
+const publicPath = path.resolve(__dirname, 'public');
+app.use( express.static(publicPath) );
 
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");

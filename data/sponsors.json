@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ferreteria El Clavo",
+    "imagen": "ferreteria.JPG"
+  },
+  {
+    "id": 2,
+    "nombre": "Lavadero El Sucio",
+    "imagen": "lavanderia.JPG"
+  },
+  {
+    "id": 3,
+    "nombre": "Panaderia El Tito",
+    "imagen": "panaderia.JPG"
+  },
+  {
+    "id": 4,
+    "nombre": "Supermercado Ava",
+    "imagen": "supermercado.JPG"
+  },
+  {
+    "id": 5,
+    "nombre": "Supermercado Mejion",
+    "imagen": "supermercado_dos.JPG"
+  },
+  {
+    "id": 6,
+    "nombre": "Supermercado El Clon",
+    "imagen": "supermercado_tres.JPG"
+  },
+  {
+    "id": 7,
+    "nombre": "Supermercado Los 33",
+    "imagen": "supermercado_cuatro.JPG"
+  },
+  {
+    "id": 8,
+    "nombre": "Supermercado Geant",
+    "imagen": "supermercado_cinco.JPG"
+  }
+]

@@ -18,6 +18,10 @@ app.set("view engine", "ejs");
 
 //Require Routers
 const indexRouter = require("./routers/indexRouter");
+const newsRouter = require("./routers/newsRouter")
 
 //Index Router
 app.use("/", indexRouter);
+
+//News Router
+//app.use("/news", newsRouter);

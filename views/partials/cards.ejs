@@ -1,0 +1,12 @@
+<% news.forEach(asd => { %>
+    <article class="toursDetail">
+        <a href="/news/detail/<%= asd.id %> " class="ref">
+            <img src="/img/news/<%= asd.image %> ">
+            <div class="detalleT">
+                <h4 class="title"> <%= asd.title %> </h4>
+                <p class="date"> <%= asd.date %> </p>
+                <p class="content"> <%= asd.content %> </p>
+            </div>
+        </a>
+</article>
+<% }) %>

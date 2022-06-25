@@ -103,3 +103,40 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
   cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
+.card-sponsors {
+    width: 200px;
+    /* margin: auto; */
+    padding: 5px;
+    /* background-o; */
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+}
+
+.nombre-sponsors {
+    font-family: "poppins";
+    font-size: 20px;
+    text-align: left;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+}
+
+.imagen-sponsors {
+    width: 80%;
+    margin-left: 5px;
+}
+
+.card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.card-body{
+    color: black;
+}

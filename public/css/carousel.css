@@ -1,0 +1,99 @@
+.carousel {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel .slide .slide-body {
+  width: 80%;
+  height: 100%;
+  background: #dcdcdd;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel .slide .slide-body .img-container {
+  width: 40%;
+  height: 80%;
+}
+
+.carousel .slide .slide-body .img-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.carousel .slide .slide-body .new {
+  width: 50%;
+  height: 80%;
+}
+
+.carousel .slide .slide-body .new .title {
+  font-weight: bold;
+}
+
+.carousel .slide .slide-body .new .date {
+  font-size: 12px;
+}
+
+.carousel .carousel-button {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 150px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+}
+
+.carousel .carousel-button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.carousel .carousel-button:hover {
+  cursor: pointer;
+}
+
+.carousel .back {
+  left: 2%;
+}
+
+.carousel .forward {
+  right: 2%;
+}
+/*# sourceMappingURL=carousel.css.map */

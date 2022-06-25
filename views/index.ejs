@@ -11,16 +11,41 @@
     <link rel="stylesheet" href="/css/carousel.css">
     
 </head>
+
+
+
 <body>
+<%- include ('partials/header') %> 
+
+<main>
+<div class="parteUnoHome">
+<h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
+<hr class="solid">
+<h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
+</div>
+
+<div class="anchorNavegacion">
+    <a class="navegacion" href="#novedades"><i class="fa-solid fa-circle-arrow-down"></i>Novedades</a>
+</div>
+<div class="botonContacto">
+<a class="fixedButton" href="#">
+    <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
+ </a>
+</div>
+
     <h1>Index:</h1>
     <%- include('partials/carrusel') %> 
     <h2>Titulo 2</h2>
     <h3>Sponsors</h3>
    <%- include("partials/esponsores") %> 
     <%- include("partials/cards") %>
+<<<<<<< HEAD
+</main>
+=======
 
     <%- include("partials/footer") %> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="/js/carousel.js"></script>
+>>>>>>> 5fb08959bdfb7ee787311961f8ed42123cf25818
 </body>
 </html>

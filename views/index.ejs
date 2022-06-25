@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo Paloeontologico San Pedro</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    
+    <link rel="stylesheet" href="/css/styles.css">  
+    <script src="https://kit.fontawesome.com/6057857b79.js" crossorigin="anonymous"></script>
 </head>
+
+
+
 <body>
+    <%- include ('partials/header') %> 
+    <main>
+    <div class="parteUnoHome">
+<h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
+<hr class="solid">
+<h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
+</div>
+
+<div class="anchorNavegacion">
+    <a class="navegacion" href="#novedades"><i class="fa-solid fa-circle-arrow-down"></i>Novedades</a>
+</div>
+<a class="fixedButton" href>
+    <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
+ </a>
+
+
     <h1>Index:</h1>
     <h2>Titulo 2</h2>
     <h3>Sponsors</h3>
    <%- include("partials/esponsores") %> 
     <%- include("partials/cards") %>
+</main>
 </body>
 </html>

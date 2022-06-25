@@ -23,6 +23,7 @@
   width: 80%;
   height: 100%;
   background: #dcdcdd;
+  border-radius: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,6 +50,14 @@
 .carousel .slide .slide-body .new {
   width: 50%;
   height: 80%;
+}
+
+.carousel .slide .slide-body .new .title {
+  font-weight: bold;
+}
+
+.carousel .slide .slide-body .new .date {
+  font-size: 12px;
 }
 
 .carousel .carousel-button {

@@ -1,12 +1,18 @@
-<% news.forEach(asd => { %>
-    <article class="toursDetail">
-        <a href="/news/detail/<%= asd.id %> " class="ref">
-            <img src="/img/news/<%= asd.image %> ">
-            <div class="detalleT">
-                <h4 class="title"> <%= asd.title %> </h4>
-                <p class="date"> <%= asd.date %> </p>
-                <p class="content"> <%= asd.content %> </p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+        <% news.forEach(not => { %>
+     <div class="col">
+            <div class="card h-100">
+            <a href="/news/detail/<%= not.id %> ">
+                <img src="/img/news/<%= not.image %> " class="card-img-top">
+                <div class="card-body ">
+                    <h4 class="card-title"> <%= not.title %> </h4>
+                    <p class="card-title"> <%= not.date %> </p>
+                    <p class="card-text"><%= not.content %></p>
+                </div>
+            </a>
             </div>
-        </a>
-</article>
-<% }) %>
+        </div>
+        <% }) %>
+</div>
+
+

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
 body {
   background-image: url(../img/fotofondoPrueba.jpg);
   background-repeat: no-repeat;
@@ -22,38 +27,50 @@ home {
 }
 
 /** NAVIGATION BAR */
-nav {
+#navigationBar {
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(79, 79, 79, 0.1882352941);
   position: fixed;
-  top: 5px;
-  left: 20%;
+  top: 10px;
+  left: 15%;
   z-index: 100;
   width: 70%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 2px #4f4f4f;
 }
-nav ul {
-  text-align: center;
+#navigationBar ul {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
-  list-style-type: none;
-  margin: 0;
-  padding: 15px;
+  padding: 0px;
+  margin: 0px;
 }
-nav ul li {
+#navigationBar ul li {
   display: inline;
   font-family: "Fira Sans", sans-serif;
   font-size: 17px;
+  align-content: center;
+  padding: 10px 50px 10px 50px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
-nav ul li a {
+#navigationBar ul .viewButton:hover {
+  background-color: rgba(155, 155, 155, 0.2509803922);
+  padding: 9px 47px 9px 47px;
+  font-size: 18px;
+}
+#navigationBar ul .viewButton a {
   color: #f2f2f2;
   text-decoration: none;
-  padding: 14px;
 }
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+#navigationBar ul .homeButton {
+  justify-self: left;
+  padding: 10px 14px 10px 15px;
+  margin-left: 0px;
+  background-color: rgba(79, 79, 79, 0.2509803922);
+  border-right: 1px solid #4f4f4f;
+  border-radius: 0px;
+  color: #f5f5f5;
 }
 
 /* main */

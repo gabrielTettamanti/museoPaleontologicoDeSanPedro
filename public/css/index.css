@@ -1,9 +1,17 @@
 .sponsorsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-flow: column wrap;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 .sponsorsContainer img {
   width: 70%;
   height: 160px;
@@ -14,4 +22,5 @@
   .sponsorsContainer img {
     width: 30%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

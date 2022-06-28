@@ -18,10 +18,14 @@ app.set("view engine", "ejs");
 
 //Require Routers
 const indexRouter = require("./routers/indexRouter");
-const newsRouter = require("./routers/newsRouter")
+const newsRouter = require("./routers/newsRouter");
+const museumRouter = require("./routers/museumRouter");
 
 //Index Router
 app.use("/", indexRouter);
 
 //News Router
 //app.use("/news", newsRouter);
+
+//Museum tour Router
+app.use("/museum", museumRouter);

@@ -49,7 +49,7 @@ home {
   transition: 0.5s;
 }
 #navigationBar ul .viewButton:hover {
-  background-color: rgba(155, 155, 155, 0.2509803922);
+  background-color: rgba(0, 0, 0, 0.3764705882);
   padding: 9px 47px 9px 47px;
   font-size: 18px;
 }
@@ -67,7 +67,7 @@ home {
   transition: 0.5s;
 }
 #navigationBar ul .homeButton:hover {
-  background-color: rgba(155, 155, 155, 0.2509803922);
+  background-color: rgba(0, 0, 0, 0.3764705882);
   padding: 7px 12px 7px 12px;
   font-size: 21px;
 }
@@ -91,11 +91,65 @@ div.parteUnoHome h1.nombreDelMuseo {
 div.anchorNavigation {
   margin-top: 10%;
   margin-bottom: 10%;
+  border: 2px solid #4f4f4f;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.1254901961);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 48px;
+  display: flex;
+  transition: 0.5s;
+}
+div.anchorNavigation:hover {
+  background-color: rgba(0, 0, 0, 0.3764705882);
+}
+div.anchorNavigation:hover .fa-arrow-down {
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  transition: 500ms;
 }
 div.anchorNavigation a {
   color: white;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0px 10px 0px 0px;
+}
+div.anchorNavigation a .fa-arrow-down {
+  margin: 0px 10px 0px 0px;
+  padding: 10px 12px;
+  border: solid 2px #4f4f4f;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.2509803922);
+  transition: 0.5s;
 }
 
+@-webkit-keyframes dance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
 /* contact button */
 div.botonContacto a.fixedButton {
   position: fixed;

@@ -1,3 +1,9 @@
+.bodyIndex {
+  background-image: url(../img/fotofondoPrueba.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .sponsorsContainer {
   display: flex;
   flex-direction: row;

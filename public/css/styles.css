@@ -4,12 +4,6 @@
   margin: 0px;
 }
 
-.bodyIndex {
-  background-image: url(../img/fotofondoPrueba.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 /** HEADER */
 /* icono home */
 home {
@@ -94,11 +88,11 @@ div.parteUnoHome h1.nombreDelMuseo {
 }
 
 /* anchor navegación */
-div.anchorNavegacion {
+div.anchorNavigation {
   margin-top: 10%;
   margin-bottom: 10%;
 }
-div.anchorNavegacion a {
+div.anchorNavigation a {
   color: white;
 }
 

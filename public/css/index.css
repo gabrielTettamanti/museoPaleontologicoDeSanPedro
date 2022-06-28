@@ -2,6 +2,7 @@
   background-image: url(../img/fotofondoPrueba.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: 110%;
 }
 
 .sponsorsContainer {

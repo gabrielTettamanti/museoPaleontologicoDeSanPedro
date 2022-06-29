@@ -1,4 +1,4 @@
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide-carousel');
 const $forwardButton = document.querySelector('.forward');
 const $backButton = document.querySelector('.back');
 

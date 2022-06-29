@@ -2,36 +2,40 @@
 <html lang="en">
 <%- include ('partials/head') %>
 
-
-
 <body class="bodyIndex">
+
     <%- include ('partials/header') %>
 
-    <main>
-        <div class="parteUnoHome">
+    <main id="fullPage">
+        <div class="section parteUnoHome">
             <h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
             <hr class="solid">
             <h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
+            <div class="anchorNavigation">
+                <a class="navigation" href="#novedades"><i class="fa-solid fa-arrow-down"></i>Novedades</a>
+            </div>
         </div>
-
-        <div class="anchorNavigation">
-            <a class="navigation" href="#novedades"><i class="fa-solid fa-arrow-down"></i>Novedades</a>
-        </div>
-        <div class="botonContacto">
+        
+        <!-- <div class="botonContacto">
             <a class="fixedButton" href="#">
                 <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
             </a>
+        </div> -->
+        
+        <div class="section">
+            <%- include('partials/carrusel') %>
         </div>
-        <%- include('partials/carrusel') %>
-        <br>
-        <br>
-        <h3 class="sponsors">Sponsors</h3>
-        <%- include("partials/esponsores") %>
-        <br>
-        <br>
-        <%- include("partials/cards") %>
 
-        <div class="containerRoute">
+        <div class="section">
+            <h3 class="sponsors">Sponsors</h3>
+            <%- include("partials/esponsores") %>
+        </div>
+
+        <div class="section">
+            <%- include("partials/cards") %>
+        </div>
+
+        <div class="section containerRoute">
             <h2>Nuestra Historia</h2>
             <p>
                 <img src="/img/Glyptodon munizi(armadillo gigante recuperado en San Pedro).jpg" alt=""
@@ -60,12 +64,17 @@
                 capitán.
             </p>
         </div>
+
+        <div class="section">
+            <%- include("partials/footer") %>
+        </div>
     </main>
 
-    <%- include("partials/footer") %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js" integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
     <script src="/js/carousel.js"></script>
     <script src="/js/newsModal.js"></script>
 </body>

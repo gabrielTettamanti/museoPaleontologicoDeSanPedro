@@ -5,22 +5,23 @@
 <body class="bodyMuseumTour">
     <%- include ('partials/header') %>
 
-    <main>
-        <div class="parteUnoHome">
+    <main id="fullPage">
+        <div class="section parteUnoHome">
             <h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
             <hr class="solid">
             <h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
+            <div class="anchorNavigation">
+                <a class="navigation" href="#novedades"><i class="fa-solid fa-arrow-down"></i>Piezas destacadas</a>
+            </div>
         </div>
 
-        <div class="anchorNavigation">
-            <a class="navigation" href="#novedades"><i class="fa-solid fa-arrow-down"></i>Piezas destacadas</a>
-        </div>
-        <div class="botonContacto">
+        <!-- <div class="botonContacto">
             <a class="fixedButton" href="#">
                 <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
             </a>
-        </div>
-        <div class="containerRoute">
+        </div> -->
+
+        <div class="section containerRoute">
             <p>
                 <img src="/img/IMG_20220401_175002840.jpg" alt="" class="imgDinosaur dinosaurLeft">
                 Este Museo está montado en un histórico caserón de 1895, propiedad de la Municipalidad de San Pedro,
@@ -54,10 +55,20 @@
                 impresión sobre el viaje imaginario a un pasado fascinante que acaba de realizar.
             </p>
         </div>
-        <%- include("partials/cards") %>
+
+        <div class="section">
+            <%- include("partials/cards") %>
+        </div>
+
+        <div class="section">
+            <%- include("partials/footer") %>
+        </div>
+
     </main>
 
-    <%- include("partials/footer") %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js" integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+
 </body>
 
 </html>

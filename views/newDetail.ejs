@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %> 
+
+<body>
+
+    <%- include ('partials/header') %>
+
+    <main>
+
+        <div class="new-title">
+            <h1>
+                <%= newDetails.title %>
+            </h1> 
+            <h5>
+                <%= newDetails.date %> 
+            </h5>
+        </div>
+
+        <article>
+            <img src="/img/news/<%= newDetails.image %> " >
+            <p><%= newDetails.content %></p>
+        </article>
+
+    </main>
+    
+</body>
+</html>

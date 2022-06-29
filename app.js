@@ -1,31 +1,36 @@
+//***** Require´s  *****/
 const express = require("express");
 const path = require("path");
+const morgan = require('morgan');
 
-
-//Server config
+//***** Server initialization  *****/
 const app = express();
-const port = 8000;
 
-app.listen(port, (req, res) => console.log("iniciando servidor en el puerto " + port))
+//***** Server configuration  *****/
+app.set('port', 8000);
 
-//Middlewares
-//app.use(express.static("public"));
+//***** Running up server  *****/
+app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));
+
+//***** Middlewares  *****/
 const publicPath = path.resolve(__dirname, 'public');
-app.use( express.static(publicPath) );
+app.use( express.static(publicPath));
+app.use(morgan('dev'));
 
+//***** Template engine *****/
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 
-//Require Routers
+//***** Routes System configuration  *****/
 const indexRouter = require("./routers/indexRouter");
 const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
 
-//Index Router
+//***** Index Router  *****/
 app.use("/", indexRouter);
 
-//News Router
-//app.use("/news", newsRouter);
+//***** News Router  *****/
+app.use("/news", newsRouter);
 
-//Museum tour Router
+//***** Museum tour router  *****/
 app.use("/museum", museumRouter);

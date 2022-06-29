@@ -1,11 +1,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
         <% news.forEach(not => { %>
             <div class="col">
-                <a href="#" class="card-link"
-                data-bs-toggle="modal" 
-                data-bs-target="#news-modal" 
-                data-bs-title="<%= not.title %>"
-                data-bs-content="<%= not.content %>">
+                <a href="/news/detail/<%= not.id %>" class="card-link">
                     <div class="card h-100">
                         <img src="/img/news/<%= not.image %> " class="card-img-top">
                         <div class="card-body ">
@@ -15,25 +11,6 @@
                         </div>
                     </div>
                 </a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="news-modal" data-bs-backdrop="static">
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">
-                                        Titulo
-                                    </h5>
-                                </div>
-                                <div class="modal-body">
-                                    <p class="news-content">Contenido</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
             </div>
         <% }) %>
 </div>

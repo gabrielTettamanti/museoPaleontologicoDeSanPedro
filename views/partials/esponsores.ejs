@@ -1,13 +1,19 @@
 
-<section class="sponsorsContainer">
-<% listaSponsors.forEach(sponsor => { %>
-<div class="card-sponsors">        
-    <!-- <a href="#"> -->
-        <img src="/img/sponsors/<%= sponsor.imagen %>" class="imagen-sponsors">
-        <!-- <p class="nombre-sponsors"><%= sponsor.nombre %></p>         -->
-    <!-- </a> -->
-</div>
-<% }) %>
-</section>
+
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <% listaSponsors.forEach(sponsor => { %>
+    <div class="col">
+      <div class="card h-100" style="max-width: 15rem;">
+        <img src="/img/sponsors/<%= sponsor.imagen %>" style="max-height: 8rem;" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title"><%= sponsor.nombre %></h5>
+          
+        </div>
+      </div>
+    </div>
+   
+    <% }) %>
+    
+  </div>
 
 

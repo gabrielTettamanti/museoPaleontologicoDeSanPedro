@@ -5,6 +5,16 @@
   background-size: 110%;
 }
 
+/* primera parte del home */
+div.parteUnoHome {
+  margin-left: 5%;
+  width: 55%;
+  color: white;
+}
+div.parteUnoHome h1.nombreDelMuseo {
+  font-size: 2em;
+}
+
 .sponsorsContainer {
   display: flex;
   flex-direction: row;

@@ -10,9 +10,10 @@
   display: flex;
   width: 100%;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .containerRoute .signTxtImg {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   padding: 5%;
@@ -49,12 +50,11 @@
 
 @media (min-width: 1020px) {
   .containerRoute .signTxtImg {
-    width: 90%;
-    padding: 25px;
+    padding: 2%;
   }
   .containerRoute .signTxtImg .imgDinosaur {
     width: 300px;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px;
   }
   .containerRoute .signTxtImg .imgMammal {
     width: 250px;

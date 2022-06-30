@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0px;
 }
 
@@ -24,7 +23,7 @@ home {
 /** NAVIGATION BAR */
 #navigationBar {
   overflow: hidden;
-  background-color: #4f4f4f30;
+  background-color: rgba(79, 79, 79, 0.1882352941);
   position: fixed;
   top: 10px;
   left: 15%;
@@ -33,56 +32,42 @@ home {
   border-radius: 10px 10px 10px 10px;
   border: solid 2px #4f4f4f;
 }
-
 #navigationBar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
-
 #navigationBar ul li {
   display: inline;
   font-family: "Fira Sans", sans-serif;
   font-size: 17px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   padding: 10px 50px 10px 50px;
   border-radius: 10px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 #navigationBar ul .viewButton:hover {
-  background-color: #00000060;
+  background-color: rgba(0, 0, 0, 0.3764705882);
   padding: 9px 47px 9px 47px;
   font-size: 18px;
 }
-
 #navigationBar ul a {
   color: #f2f2f2;
   text-decoration: none;
 }
-
 #navigationBar ul .homeButton {
-  -ms-grid-column-align: left;
-      justify-self: left;
+  justify-self: left;
   padding: 10px 14px 10px 14px;
   margin-left: 0px;
-  background-color: #4f4f4f40;
+  background-color: rgba(79, 79, 79, 0.2509803922);
   border-right: 1px solid #4f4f4f;
   border-radius: 0px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 #navigationBar ul .homeButton:hover {
-  background-color: #00000060;
+  background-color: rgba(0, 0, 0, 0.3764705882);
   padding: 7px 12px 7px 12px;
   font-size: 21px;
 }
@@ -94,7 +79,6 @@ div.parteUnoHome {
   width: 55%;
   color: white;
 }
-
 div.parteUnoHome h1.nombreDelMuseo {
   font-size: 2em;
 }
@@ -105,79 +89,76 @@ div.anchorNavigation {
   margin-bottom: 10%;
   border: 2px solid #4f4f4f;
   border-radius: 100px;
-  background-color: #00000020;
+  background-color: rgba(0, 0, 0, 0.1254901961);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 div.anchorNavigation:hover {
-  background-color: #00000060;
+  background-color: rgba(0, 0, 0, 0.3764705882);
 }
-
 div.anchorNavigation:hover .fa-arrow-down {
-  background-color: #00000060;
-  -webkit-animation-name: dance;
-          animation-name: dance;
+  -webkit-animation-name: anchorMove;
+          animation-name: anchorMove;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  background-color: rgba(0, 0, 0, 0.5647058824);
 }
-
 div.anchorNavigation a {
   color: white;
   font-size: 20px;
   text-decoration: none;
   padding: 0px 10px 0px 0px;
 }
-
 div.anchorNavigation a .fa-arrow-down {
   margin: 0px 10px 0px 0px;
   padding: 10px 12px;
   border: solid 2px #4f4f4f;
   border-radius: 100px;
-  background-color: #00000040;
-  -webkit-transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.2509803922);
   transition: 0.5s;
 }
 
-@-webkit-keyframes dance {
+@-webkit-keyframes anchorMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  50% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  20% {
+    transform: rotate(400deg);
+  }
+  40% {
+    transform: rotate(330deg);
+  }
+  70% {
+    transform: rotate(380deg);
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    transform: rotate(360deg);
   }
 }
 
-@keyframes dance {
+@keyframes anchorMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  50% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  20% {
+    transform: rotate(400deg);
+  }
+  40% {
+    transform: rotate(330deg);
+  }
+  70% {
+    transform: rotate(380deg);
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    transform: rotate(360deg);
   }
 }
-
 /* contact button */
 div.botonContacto a.fixedButton {
   position: fixed;
@@ -185,7 +166,6 @@ div.botonContacto a.fixedButton {
   right: 0px;
   padding: 20px;
 }
-
 div.botonContacto a.fixedButton div.roundedFixedBtn {
   height: 60px;
   line-height: 65px;
@@ -219,175 +199,126 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
 
 /*Style footer*/
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: #f5f5f5;
 }
-
 .footer ul {
   padding: 0px;
 }
-
 .footer ul li {
   list-style: none;
   margin: 0 25px 41px 0px;
   font-size: 22px;
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
   width: 100%;
 }
-
 .footer ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 300px;
   color: #f5f5f5;
   text-decoration: none;
 }
-
 .footer ul li i {
-  background-color: #00000040;
+  background-color: rgba(0, 0, 0, 0.2509803922);
   padding: 5%;
 }
-
 .footer ul .topLi {
   border-radius: 30px 0 0 0;
 }
-
 .footer ul .topLi:hover {
-  background-color: #f5f5f550;
+  background-color: rgba(245, 245, 245, 0.3137254902);
   font-size: 23px;
 }
-
 .footer ul .topLi i {
   border-radius: 100px 100px 100px 0;
 }
-
 .footer ul .centerLi:hover {
-  background-color: #f5f5f550;
+  background-color: rgba(245, 245, 245, 0.3137254902);
   font-size: 23px;
 }
-
 .footer ul .centerLi i {
   border-radius: 0px 100px 100px 0;
 }
-
 .footer ul .bottomLi {
   border-radius: 0 0 0 30px;
 }
-
 .footer ul .bottomLi:hover {
-  background-color: #f5f5f550;
+  background-color: rgba(245, 245, 245, 0.3137254902);
   font-size: 23px;
 }
-
 .footer ul .bottomLi i {
   border-radius: 0 100px 100px 100px;
 }
-
 .footer .sectionFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   margin-bottom: 5%;
 }
-
 .footer .sectionFooter h2 {
   text-align: center;
   margin-bottom: 15px;
 }
-
 .footer .sectionFooter .contactsP {
   padding: 10px 25px 10px 15px;
   margin: 0;
 }
-
 .footer .sectionFooter .containerIframe {
   text-align: left;
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
   border-radius: 0 50px 100px 0;
   padding: 13px 10px 0 0;
 }
-
 .footer .sectionFooter .containerIframe p {
   padding: 0 5px;
 }
-
 .footer .sectionFooter .containerIframe iframe {
   width: 97%;
   height: 364px;
   margin: 5px;
   border-radius: 0 10px 75px 0;
 }
-
 .footer .formSubscription {
   margin-bottom: 20px;
   width: 95%;
 }
-
 .footer .formSubscription form {
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border-radius: 100px;
 }
-
 .footer .formSubscription form input {
   width: 91%;
   padding-left: 20px;
   background: none;
   border: none;
 }
-
 .footer .formSubscription form input:focus {
   outline: none;
   color: #f5f5f5;
 }
-
 .footer .formSubscription form button {
   background: none;
   border: none;
 }
-
 .footer .formSubscription form button i {
   color: #f5f5f5;
 }
 
 @media (min-width: 768px) {
   .footer .sectionFooter {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .footer .sectionFooter li {
     width: 95%;
   }
 }
-
 @media (min-width: 1024px) {
   .footer .formSubscription {
     width: 75%;
@@ -399,7 +330,6 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
     width: 100%;
   }
 }
-
 @media (min-width: 1440px) {
   .footer .formSubscription {
     width: 50%;
@@ -407,5 +337,4 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
   .footer .formSubscription form input {
     width: 96%;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

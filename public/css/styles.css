@@ -68,7 +68,7 @@ home {
 }
 #navigationBar ul .homeButton:hover {
   background-color: rgba(0, 0, 0, 0.3764705882);
-  padding: 7px 12px 7px 12px;
+  padding: 7px 11.5px 7px 11.5px;
   font-size: 21px;
 }
 
@@ -103,8 +103,8 @@ div.anchorNavigation:hover {
 div.anchorNavigation:hover .fa-arrow-down {
   -webkit-animation-name: anchorMove;
           animation-name: anchorMove;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   background-color: rgba(0, 0, 0, 0.5647058824);

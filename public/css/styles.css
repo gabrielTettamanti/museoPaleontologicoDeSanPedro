@@ -259,6 +259,7 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 .footer .sectionFooter h2 {
@@ -286,7 +287,6 @@ div.botonContacto a.fixedButton div.roundedFixedBtn {
   border-radius: 0 10px 75px 0;
 }
 .footer .formSubscription {
-  margin-bottom: 20px;
   width: 95%;
 }
 .footer .formSubscription form {

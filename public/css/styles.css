@@ -371,6 +371,7 @@ div.anchorNavigation a .fa-arrow-down {
 .footer .formSubscription form {
   background-color: rgba(99, 99, 99, 0.4941176471);
   border-radius: 100px;
+  width: 100%;
 }
 .footer .formSubscription form input {
   width: 91%;
@@ -403,20 +404,17 @@ div.anchorNavigation a .fa-arrow-down {
 }
 @media (min-width: 1024px) {
   .footer .formSubscription {
-    width: 75%;
+    width: 100%;
   }
   .footer .formSubscription form input {
-    width: 95%;
+    width: 100%;
   }
   .footer .formSubscription .containerIframe iframe {
     width: 100%;
   }
 }
 @media (min-width: 1440px) {
-  .footer .formSubscription {
-    width: 50%;
-  }
   .footer .formSubscription form input {
-    width: 96%;
+    width: 90%;
   }
 }/*# sourceMappingURL=styles.css.map */

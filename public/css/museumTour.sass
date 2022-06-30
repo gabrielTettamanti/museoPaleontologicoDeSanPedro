@@ -11,7 +11,8 @@
     align-items: center
     background-color: rgba(000, 000, 000, 0.80)
     .signTxtImg
-        width: 95%
+        width: 90vw
+        justify-content: center
         display: flex
         flex-direction: column
         padding: 5%
@@ -21,23 +22,12 @@
         h2
             text-align: center
         p
-            font-size: 20px
+            font-size: 14px
             font-family: sans-serif
             margin-bottom: 0
-        .imgDinosaur
-            float: right
-            width: 100%
-            height: 250px
-            border-radius: 10px
-        .dinosaurLeft
-            float: left
-        .imgMammal
-            float: right
-            border-radius: 10px
-            width: 100%
-            height: 250px
-        .mammalLeft
-            float: left
+        .imgDinosaur, .imgMammal
+            display: none
+
 
 
 @media (min-width: 1020px)
@@ -45,9 +35,21 @@
     .containerRoute
         .signTxtImg
             padding: 2%
+            p
+                font-size: 22px
             .imgDinosaur
+                display: flex
+                float: right
+                border-radius: 10px
                 width: 300px
                 margin: 5px 15px
+            .dinosaurLeft
+                float: left
             .imgMammal
+                display: flex
+                float: right
+                border-radius: 10px
                 width: 250px
                 margin: 25px 15px
+            .mammalLeft
+                float: left

@@ -20,6 +20,7 @@ div.parteUnoHome h1.nombreDelMuseo {
   flex-direction: row;
   flex-flow: column wrap;
   flex-wrap: nowrap;
+  align-content: center;
 }
 .sponsorsContainer img {
   width: 70%;

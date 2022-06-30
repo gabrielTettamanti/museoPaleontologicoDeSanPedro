@@ -128,13 +128,13 @@ div.anchorNavigation a .fa-arrow-down {
   0% {
     transform: rotate(0deg);
   }
-  20% {
+  25% {
     transform: rotate(400deg);
   }
-  40% {
+  50% {
     transform: rotate(330deg);
   }
-  70% {
+  80% {
     transform: rotate(380deg);
   }
   100% {
@@ -146,13 +146,13 @@ div.anchorNavigation a .fa-arrow-down {
   0% {
     transform: rotate(0deg);
   }
-  20% {
+  25% {
     transform: rotate(400deg);
   }
-  40% {
+  50% {
     transform: rotate(330deg);
   }
-  70% {
+  80% {
     transform: rotate(380deg);
   }
   100% {

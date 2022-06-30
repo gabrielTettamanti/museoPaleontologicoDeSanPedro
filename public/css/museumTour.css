@@ -30,7 +30,7 @@
   font-family: sans-serif;
   margin-bottom: 0;
 }
-.containerRoute .signTxtImg .imgDinosaur, .containerRoute .signTxtImg .imgMammal {
+.containerRoute .signTxtImg .imgHistory {
   display: none;
 }
 
@@ -39,26 +39,21 @@
     padding: 2%;
   }
   .containerRoute .signTxtImg p {
-    font-size: 22px;
+    font-size: 16px;
   }
-  .containerRoute .signTxtImg .imgDinosaur {
-    display: flex;
-    float: right;
-    border-radius: 10px;
-    width: 300px;
-    margin: 5px 15px;
-  }
-  .containerRoute .signTxtImg .dinosaurLeft {
-    float: left;
-  }
-  .containerRoute .signTxtImg .imgMammal {
+  .containerRoute .signTxtImg .imgHistory {
     display: flex;
     float: right;
     border-radius: 10px;
     width: 250px;
     margin: 25px 15px;
   }
-  .containerRoute .signTxtImg .mammalLeft {
+  .containerRoute .signTxtImg .historyLeft {
     float: left;
+  }
+}
+@media (min-width: 1900px) {
+  .containerRoute .signTxtImg p {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=museumTour.css.map */

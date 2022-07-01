@@ -25,6 +25,7 @@ app.set("view engine", "ejs");
 const indexRouter = require("./routers/indexRouter");
 const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
+const adminRouter = require("./routers/adminRouter");
 
 //***** Index Router  *****/
 app.use("/", indexRouter);
@@ -34,3 +35,6 @@ app.use("/news", newsRouter);
 
 //***** Museum tour router  *****/
 app.use("/museum", museumRouter);
+
+//***** Admin router  *****/
+app.use("/admin", adminRouter);

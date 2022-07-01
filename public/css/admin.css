@@ -1,0 +1,116 @@
+.bodyAdmin {
+  background-image: url(../img/fotofondoPrueba.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 110%;
+}
+
+/* primera parte del home */
+form {
+  margin-top: 10%;
+  margin-left: 5%;
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  padding: 45px;
+}
+
+h3.login-title {
+  text-align: center;
+  color: #F5F5F5;
+  margin-bottom: 5%;
+}
+
+/* log in form */
+div.login-form {
+  width: 90%;
+}
+
+input.barra-espacios {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 15px;
+  outline: 0;
+  border: 0;
+  width: 90%;
+  margin: 0 0 15px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5%;
+}
+
+input.barra-espacios:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+input.barra-espacios:focus {
+  color: #F5F5F5;
+}
+
+input::-webkit-input-placeholder {
+  color: #F5F5F5;
+  text-align: center;
+}
+
+input:-ms-input-placeholder {
+  color: #F5F5F5;
+  text-align: center;
+}
+
+input::-ms-input-placeholder {
+  color: #F5F5F5;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #F5F5F5;
+  text-align: center;
+}
+
+.remember-login {
+  text-align: center;
+  font-size: 16px;
+  margin: 15px 0px;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+  color: #F5F5F5;
+  margin-left: 45%;
+  margin-bottom: 5px;
+}
+
+input.recordar-usuario {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  verticle-align: middle;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.button-login {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  margin-top: 10px;
+}
+
+.button-login:hover {
+  background-color: #dfdfdf;
+}
+
+i.fa-solid.fa-user {
+  margin-right: 5px;
+}
+/*# sourceMappingURL=admin.css.map */

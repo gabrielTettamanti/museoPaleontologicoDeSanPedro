@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+
+<body class="bodyAdmin">
+    <%- include ('partials/header') %>
+    <%- include ("partials/contactButton") %> 
+
+    <main id="fullPage">
+        <form action="/admin" method="post">
+            <div id="section-login">
+                <h3 class="login-title">Iniciar Sesion</h3>
+                <div id="login-form">
+                    <div id="login-form">
+                        <div class="email-login">
+                            <input type="email" name="email" class="barra-espacios" placeholder="ejemplo@email.com" >              
+                        </div>
+                        <div class="password-login">
+                            <br>
+                            <input type="password" name="password" class="barra-espacios" placeholder="Contraseña">
+                        </div>
+                        <div class="remember-login">
+                            <div class="checkbox-u"><label><input type="checkbox" name="recordar-usuario" class="recordar-usuario">Recordarme</label>
+                    </div>
+                    <div class="button-login-page"><button type="submit" class="button-login"><i class="fa-solid fa-user"></i>Iniciar Sesion</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </form>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js" integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+
+</body>
+
+</html>

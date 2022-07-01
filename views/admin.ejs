@@ -3,70 +3,76 @@
 <%- include ('partials/head') %>
 
 <body class="bodyAdmin">
-    <%- include ('partials/header') %>
-    <%- include ("partials/contactButton") %> 
+    
+    <%- include ('partials/header') %> 
 
     <main id="fullPage">
 
-        <section>
-        <form action="/admin" method="post">
-            <div id="section login">
-                <h3 class="login-title">Iniciar Sesion</h3>
-                <div id="login-form">
+        <div class="section" id="adminLogin">
+
+            <form action="/admin" method="post">
+                <div id="login">
+                    <h3 class="login-title">Iniciar Sesion</h3>
                     <div id="login-form">
-                        <div class="email-login">
-                            <input type="email" name="email" class="barra-espacios" placeholder="ejemplo@email.com" >              
+                            <div class="email-login">
+                                <input type="email" name="email" class="barra-espacios" placeholder="ejemplo@email.com">
+                            </div>
+                            <div class="password-login">
+                                <br>
+                                <input type="password" name="password" class="barra-espacios" placeholder="Contraseña">
+                            </div>
+                            <div class="remember-login">
+                                <div class="checkbox-u">
+                                    <label><input type="checkbox" name="recordar-usuario" class="recordar-usuario">Recordarme</label>
+                                </div>
+                                <div class="button-login-page">
+                                <button type="submit" class="button-login"><i class="fa-solid fa-user"></i>Iniciar Sesion</button>
+                            </div>
                         </div>
-                        <div class="password-login">
-                            <br>
-                            <input type="password" name="password" class="barra-espacios" placeholder="Contraseña">
-                        </div>
-                        <div class="remember-login">
-                            <div class="checkbox-u"><label><input type="checkbox" name="recordar-usuario" class="recordar-usuario">Recordarme</label>
-                    </div>
-                    <div class="button-login-page"><button type="submit" class="button-login"><i class="fa-solid fa-user"></i>Iniciar Sesion</button>
                     </div>
                 </div>
-            </div>
-            </div>
-        </form>
-    </section>
+          </form>
 
-<section>
-    <form method="POST" action="/" enctype="multipart/form-data" >
-        <div class="section create-news">
-        <legend class="legend-create-news">Crear Producto</legend>
-            <div class="create-news">
-                <input type="text" name="news_title" class="news-title" placeholder="Título">
-                <input type="date" name="news_date" class="news-date">
-            </div>
-            <div class="create-news">
-                <textarea name="news_description" class="news-description" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
-            </div>
+        </div>
+        
+        <div class="section">
 
-            <div class="button-news">
-                <input type="file" name="news_image" accept=".jpg, .png">
-                    <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
-                    <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
-                </div>
-            </div>
-</form>
-</section>
+            <form method="POST" action="/" enctype="multipart/form-data" >
+                <div class="create-news">
+                <legend class="legend-create-news">Crear Producto</legend>
+                    <div class="create-news">
+                        <input type="text" name="news_title" class="news-title" placeholder="Título">
+                        <input type="date" name="news_date" class="news-date">
+                    </div>
+                    <div class="create-news">
+                        <textarea name="news_description" class="news-description" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
+                    </div>
+        
+                    <div class="button-news">
+                        <input type="file" name="news_image" accept=".jpg, .png">
+                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
+                            <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                        </div>
+                    </div>
+            </form>
 
+        </div>
 
+        <!-- <div class="section">
+                
+        </div> -->
+        
+    </main>
 
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
-    integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/js/fullPage.js"></script>
-<!-- <script src="/js/carousel.js"></script>
-<script src="/js/newsModal.js"></script>  -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
+        integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/newsModal.js"></script>
 </body>
 
 </html>

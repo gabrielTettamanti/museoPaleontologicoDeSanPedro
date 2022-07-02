@@ -68,7 +68,7 @@ home {
 
 /* main */
 /* anchor navegación */
-div.anchorNavigation {
+div.standardButton {
   margin-top: 10%;
   margin-bottom: 10%;
   border: 2px solid #4f4f4f;
@@ -81,10 +81,10 @@ div.anchorNavigation {
   display: flex;
   transition: 0.5s;
 }
-div.anchorNavigation:hover {
+div.standardButton:hover {
   background-color: rgba(0, 0, 0, 0.3764705882);
 }
-div.anchorNavigation:hover .fa-arrow-down {
+div.standardButton:hover i {
   -webkit-animation-name: anchorMove;
           animation-name: anchorMove;
   -webkit-animation-duration: 2s;
@@ -93,13 +93,13 @@ div.anchorNavigation:hover .fa-arrow-down {
           animation-timing-function: ease;
   background-color: rgba(0, 0, 0, 0.5647058824);
 }
-div.anchorNavigation a {
+div.standardButton a {
   color: white;
   font-size: 20px;
   text-decoration: none;
   padding: 0px 10px 0px 0px;
 }
-div.anchorNavigation a .fa-arrow-down {
+div.standardButton a i {
   margin: 0px 10px 0px 0px;
   padding: 10px 12px;
   border: solid 2px #4f4f4f;

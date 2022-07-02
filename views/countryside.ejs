@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ("partials/head") %> 
+<body class="bodyCountrysideVisit">
+    <%- include ('partials/header') %>
+    <%- include ("partials/contactButton") %> 
+
+    <main id="fullPage">
+        <div class="section parteUnoHome">
+            <h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
+            <hr class="solid">
+            <h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
+            <div class="standardButton">
+                <a class="navigation" href="/#news"><i class="fa-solid fa-arrow-down"></i>Novedades</a>
+            </div>
+        </div>
+        <div class="section containerRoute">
+            <%- include("partials/footer") %>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
+    integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+</body>
+</html>

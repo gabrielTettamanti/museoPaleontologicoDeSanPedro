@@ -367,22 +367,28 @@ div.standardButton a i {
   border-radius: 0 10px 75px 0;
 }
 .footer .formSubscription {
-  width: 95%;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  flex-direction: column;
 }
 .footer .formSubscription form {
   background-color: rgba(99, 99, 99, 0.4941176471);
   border-radius: 100px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
 }
 .footer .formSubscription form input {
-  width: 91%;
-  padding-left: 20px;
+  width: inherit;
+  padding-left: 5%;
   background: none;
   border: none;
+  color: #f5f5f5;
 }
 .footer .formSubscription form input:focus {
   outline: none;
-  color: #f5f5f5;
 }
 .footer .formSubscription form button {
   background: none;
@@ -457,14 +463,12 @@ div.standardButton a i {
     left: 85%;
   }
 
-  .footer .formSubscription {
+  /* Footer */
+  .footer .containerIframe iframe {
     width: 100%;
   }
-  .footer .formSubscription form input {
-    width: 100%;
-  }
-  .footer .formSubscription .containerIframe iframe {
-    width: 100%;
+  .footer .formSubscription form {
+    width: 80%;
   }
 }
 @media (min-width: 1200px) {
@@ -475,9 +479,5 @@ div.standardButton a i {
 @media (min-width: 1440px) {
   .botonContacto {
     left: 90%;
-  }
-
-  .footer .formSubscription form input {
-    width: 90%;
   }
 }/*# sourceMappingURL=styles.css.map */

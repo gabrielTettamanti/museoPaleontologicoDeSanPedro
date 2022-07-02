@@ -6,7 +6,7 @@
 }
 
 /* primera parte del home */
-form {
+.formAdmin {
   margin-left: 5%;
   position: relative;
   z-index: 1;

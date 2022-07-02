@@ -145,6 +145,7 @@ div.anchorNavigation a .fa-arrow-down {
 }
 /* contact button */
 .botonContacto {
+  display: none;
   position: fixed;
   overflow: hidden;
   top: 90%;
@@ -405,6 +406,11 @@ div.anchorNavigation a .fa-arrow-down {
   }
 }
 @media (min-width: 768px) {
+  .botonContacto {
+    display: block;
+    left: 80%;
+  }
+
   .footer .sectionFooter {
     flex-direction: row;
   }
@@ -447,6 +453,10 @@ div.anchorNavigation a .fa-arrow-down {
     font-size: 21px;
   }
 
+  .botonContacto {
+    left: 85%;
+  }
+
   .footer .formSubscription {
     width: 100%;
   }
@@ -457,7 +467,16 @@ div.anchorNavigation a .fa-arrow-down {
     width: 100%;
   }
 }
+@media (min-width: 1200px) {
+  .botonContacto {
+    left: 85%;
+  }
+}
 @media (min-width: 1440px) {
+  .botonContacto {
+    left: 90%;
+  }
+
   .footer .formSubscription form input {
     width: 90%;
   }

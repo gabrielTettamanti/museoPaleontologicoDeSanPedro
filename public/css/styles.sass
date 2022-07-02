@@ -117,6 +117,7 @@ div.anchorNavigation
 
 /* contact button */
 .botonContacto
+  display: none
   position: fixed
   overflow: hidden
   top: 90%
@@ -308,6 +309,10 @@ div.anchorNavigation
 
 @media (min-width: 768px)
 
+  .botonContacto
+    display: block
+    left: 80%
+
   .footer
     .sectionFooter
       flex-direction: row
@@ -346,6 +351,9 @@ div.anchorNavigation
           padding: 7px 11.5px 7px 11.5px
           font-size: 21px
 
+  .botonContacto
+    left: 85%
+
   .footer
     .formSubscription
       width: 100%
@@ -357,7 +365,15 @@ div.anchorNavigation
         iframe
           width: 100%
 
+@media (min-width:1200px)
+
+  .botonContacto
+    left: 85%
+
 @media (min-width:1440px)
+
+  .botonContacto
+    left: 90%
         
   .footer
     .formSubscription

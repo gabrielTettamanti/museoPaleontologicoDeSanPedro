@@ -30,12 +30,12 @@ home
   overflow: hidden
   background-color: #4f4f4f30
   position: fixed
-  top: 10px
-  left: 15%
+  top: 0px
+  left: 0%
   z-index: 100
-  width: 70%
-  border-radius: 10px 10px 10px 10px
-  border: solid 2px $gray
+  width: 100%
+  border-radius: 0px 0px 0px 0px
+  border: solid 0px $gray
   ul 
     display: flex
     justify-content: space-between
@@ -45,31 +45,21 @@ home
     li 
       display: inline
       font-family: "Fira Sans", sans-serif
-      font-size: 17px
+      font-size: 16px
+      text-align: center
       align-content: center
-      padding: 10px 50px 10px 50px
+      padding: 5px 0px 5px 0px
       border-radius: 10px
-      transition: 0.5s
-    .viewButton  
-      &:hover 
-        background-color: #00000060
-        padding: 9px 47px 9px 47px
-        font-size: 18px
     a 
       color: #f2f2f2
       text-decoration: none
     .homeButton
       justify-self: left
-      padding: 10px 14px 10px 14px
+      padding: 10px 10px 10px 10px
       margin-left: 0px
       background-color: #4f4f4f40
       border-right: 1px solid $gray
       border-radius: 0px 
-      transition: 0.5s
-      &:hover 
-        background-color: #00000060
-        padding: 7px 11.5px 7px 11.5px
-        font-size: 21px
 
         
 
@@ -304,11 +294,17 @@ div.anchorNavigation
         i
           color: #f5f5f5
 
-@keyframes footerAnimation
-  0%
-
-  100%
-  
+@media (min-width: 439px)
+  #navigationBar 
+    top: 10px
+    left: 5%
+    width: 90%
+    border-radius: 10px 10px 10px 10px
+    border: solid 2px $gray
+    ul 
+      li 
+        max-width: 25%
+        border-radius: 10px
 
 @media (min-width: 768px)
 
@@ -319,6 +315,36 @@ div.anchorNavigation
         width: 95% 
 
 @media (min-width:1024px)
+
+  #navigationBar 
+    left: 10%
+    width: 80%
+    ul 
+      li 
+        font-size: 17px
+        padding: 10px 50px 10px 50px
+        border-radius: 10px
+        transition: 0.5s
+      .viewButton  
+        &:hover 
+          background-color: #00000060
+          padding: 9px 47px 9px 47px
+          font-size: 18px
+          a 
+            color: #f2f2f2
+            text-decoration: none
+      .homeButton
+        justify-self: left
+        padding: 10px 14px 10px 14px
+        margin-left: 0px
+        background-color: #4f4f4f40
+        border-right: 1px solid $gray
+        border-radius: 0px 
+        transition: 0.5s
+        &:hover 
+          background-color: #00000060
+          padding: 7px 11.5px 7px 11.5px
+          font-size: 21px
 
   .footer
     .formSubscription

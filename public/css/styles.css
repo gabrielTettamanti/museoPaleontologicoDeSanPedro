@@ -256,7 +256,7 @@ div.standardButton a i {
 }
 .footer ul li {
   list-style: none;
-  margin: 0 25px 38.7px 0px;
+  margin: 0 25px 22.7px 0px;
   font-size: 22px;
   background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
@@ -339,12 +339,9 @@ div.standardButton a i {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 .footer .sectionFooter h2 {
   text-align: center;
-  margin-bottom: 15px;
 }
 .footer .sectionFooter .contactsP {
   padding: 10px 25px 10px 15px;
@@ -362,7 +359,7 @@ div.standardButton a i {
 }
 .footer .sectionFooter .containerIframe iframe {
   width: 97%;
-  height: 364px;
+  height: 300px;
   margin: 5px;
   border-radius: 0 10px 75px 0;
 }
@@ -375,7 +372,7 @@ div.standardButton a i {
 .footer .formSubscription form {
   background-color: rgba(99, 99, 99, 0.4941176471);
   border-radius: 100px;
-  width: 100%;
+  width: inherit;
   display: flex;
   justify-content: space-between;
   padding: 2px;
@@ -464,11 +461,17 @@ div.standardButton a i {
   }
 
   /* Footer */
+  .footer {
+    margin-top: 5%;
+  }
   .footer .containerIframe iframe {
     width: 100%;
   }
+  .footer .formSubscription {
+    width: 100%;
+  }
   .footer .formSubscription form {
-    width: 80%;
+    width: inherit;
   }
 }
 @media (min-width: 1200px) {
@@ -479,5 +482,15 @@ div.standardButton a i {
 @media (min-width: 1440px) {
   .botonContacto {
     left: 90%;
+  }
+
+  .footer {
+    margin-top: 1%;
+  }
+  .footer .sectionFooter li {
+    margin: 0 25px 38.7px 0px;
+  }
+  .footer .sectionFooter .containerIframe iframe {
+    height: 364px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -191,7 +191,7 @@ div.standardButton
     padding: 0px
     li
       list-style: none
-      margin: 0 25px 38.7px 0px
+      margin: 0 25px 22.7px 0px
       font-size: 22px
       background-color: #6363637e 
       border: 1px solid #f5f5f5
@@ -252,11 +252,8 @@ div.standardButton
     flex-direction: column
     flex-wrap: nowrap
     justify-content: center
-    margin-top: 5%
-    margin-bottom: 5%
     h2 
       text-align: center
-      margin-bottom: 15px
     .contactsP
       padding: 10px 25px 10px 15px
       margin: 0
@@ -271,7 +268,7 @@ div.standardButton
         padding: 0 5px
       iframe
         width: 97%
-        height: 364px
+        height: 300px
         margin: 5px
         border-radius: 0 10px 75px 0
 
@@ -283,7 +280,7 @@ div.standardButton
     form
       background-color: #6363637e 
       border-radius: 100px
-      width: 100%
+      width: inherit
       display: flex
       justify-content: space-between
       padding: 2px
@@ -362,22 +359,35 @@ div.standardButton
 
   /* Footer */
   .footer
+    margin-top: 5%
     .containerIframe
       iframe
         width: 100%
-    .formSubscription 
-        form 
-          width: 80%
-
+    .formSubscription
+      width: 100%
+      form 
+        width: inherit
 @media (min-width:1200px)
 
   .botonContacto
     left: 85%
 
+
+
 @media (min-width:1440px)
 
   .botonContacto
     left: 90%
+
+
+  .footer
+    margin-top: 1%
+    .sectionFooter
+      li      
+        margin: 0 25px 38.7px 0px 
+      .containerIframe
+        iframe
+          height: 364px
         
 
 

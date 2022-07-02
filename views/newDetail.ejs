@@ -21,22 +21,28 @@
 
     <main>
 
-        <div class="new-title">
-            <h1>
-                <%= newDetails.title %>
-            </h1> 
-            <h5>
-                <%= newDetails.date %> 
-            </h5>
-        </div>
+        <section class="new-container">
 
-        <div class="image-container">
-            <img src="/img/news/<%= newDetails.image %>">
-        </div>
+            <div class="new">
+                <div class="new-title">
+                    <h1 class="title">
+                        <%= newDetails.title %>
+                    </h1> 
+                    <h5 class="date">
+                        <%= newDetails.date %> 
+                    </h5>
+                </div>
+        
+                <div class="image-container">
+                    <img src="/img/news/<%= newDetails.image %>">
+                </div>
+        
+                <article class="new-body">
+                    <p><%= newDetails.content %></p>
+                </article>
+            </div>
 
-        <article class="new-body">
-            <p><%= newDetails.content %></p>
-        </article>
+        </section>
 
     </main>
     

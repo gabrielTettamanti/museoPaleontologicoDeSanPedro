@@ -12,24 +12,23 @@
             <h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
             <hr class="solid">
             <h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
-            <div class="anchorNavigation">
+            <div class="standardButton">
                 <a class="navigation" href="/#news"><i class="fa-solid fa-arrow-down"></i>Novedades</a>
             </div>
         </div>
         
-        <div class="section" id="news">
+        <div class="section containerRoute" id="news">
             <%- include('partials/carrusel') %>
             <div class="anchorNavigation see-news">
                 <a class="navigation" href="/news/list"><i class="fa-solid fa-arrow-down"></i>Ver Noticias</a>
             </div>
         </div>
 
-        <div class="section">
-                <h3 class="sponsors">Sponsors</h3>
-                <%- include("partials/esponsores") %>
+        <div class="section containerRoute">
+            <%- include("partials/cards") %>
         </div>
 
-        <div class="section containerRoute">
+        <div class="section containerRoute" id="whoWeAre">
             <div class="signTxtImg">
                 <h2>Nuestra Historia</h2>
                 <p>
@@ -65,6 +64,10 @@
             </div>
         </div>
 
+        <div class="section containerRoute">
+            <h3 class="sponsors">Sponsors</h3>
+            <%- include("partials/sponsorsCarousel", { sponsors: listaSponsors}) %>
+        </div>
 
         <div class="section containerRoute">
             <%- include("partials/footer") %>
@@ -80,6 +83,7 @@
     <script src="/js/fullPage.js"></script>
     <script src="/js/carousel.js"></script>
     <script src="/js/newsModal.js"></script>
+    <script src="/js/sponsorsCarousel.js"></script>
 </body>
 
 </html>

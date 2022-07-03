@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `museo_db`.`notices` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-
+INSERT INTO notices VALUES (1, "DESCUBREN RASTROS DEL MAR DE HACE 5.000 AÑOS EN VUELTA DE OBLIGADO, A 18 KM DE SAN PEDRO",null," El equipo del Museo Paleontológico .","new1.jpeg",1);
 -- -----------------------------------------------------
 -- Table `museo_db`.`sponsores`
 -- -----------------------------------------------------

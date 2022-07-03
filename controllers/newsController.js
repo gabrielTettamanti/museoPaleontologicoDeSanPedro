@@ -6,7 +6,7 @@ const news = JSON.parse(fs.readFileSync(newsFilePath, 'utf-8'));
 
 const newsController = {
     list: (req, res) => {
-        res.render("index", { news });
+        res.render("newsList", { news });
     },
     detail: (req, res) => {
         const newId = req.params.id;

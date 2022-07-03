@@ -10,4 +10,6 @@ const router = Router();
 //***** Getting a news detail by id *****/
 router.get('/detail/:id', newsController.detail);
 
+router.get('/list', newsController.list)
+
 module.exports = router;

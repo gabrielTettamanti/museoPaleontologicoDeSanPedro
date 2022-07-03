@@ -250,8 +250,22 @@ div.anchorNavigation a .fa-arrow-down {
 }
 
 .row {
-  margin: 0px;
+  margin: 20px;
   padding: 0px;
+  margin-top: 20px;
+}
+
+.news-title {
+  margin-top: 120px;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.see-news {
+  align-self: center;
 }
 
 /*Style footer*/
@@ -402,9 +416,6 @@ div.anchorNavigation a .fa-arrow-down {
   color: #f5f5f5;
 }
 
-@-webkit-keyframes footerAnimation {}
-
-@keyframes footerAnimation {}
 @media (min-width: 768px) {
   .footer .sectionFooter {
     flex-direction: row;

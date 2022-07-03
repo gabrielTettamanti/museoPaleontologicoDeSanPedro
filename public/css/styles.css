@@ -416,7 +416,15 @@ div.anchorNavigation a .fa-arrow-down {
   color: #f5f5f5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+  .row {
+    margin: 70px;
+  }
+
+  .col {
+    padding: 15px;
+  }
+
   .footer .sectionFooter {
     flex-direction: row;
   }

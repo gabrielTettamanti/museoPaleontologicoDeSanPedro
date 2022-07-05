@@ -18,7 +18,6 @@ const adminController = {
     },
 
     create: (req, res) => {
-        console.log(req.body);
         const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
         Admin.create({
             email: req.body.email,
@@ -28,7 +27,20 @@ const adminController = {
         })
         .then(admin => {
             res.redirect('/admin');
-        })
+        });
+    }, 
+
+    list: (req, res) => {
+        Admin.findAll()
+        .then(admins => {
+            return res.status(200).json({
+                meta: {
+                    status: 200,
+                    total: admins.length
+                },
+                data: admins
+            });
+        });
     }
 };
 

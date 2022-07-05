@@ -15,6 +15,8 @@ app.listen(app.get('port'), () => console.log(`Server up & running in port ${app
 //***** Middlewares  *****/
 const publicPath = path.resolve(__dirname, 'public');
 app.use( express.static(publicPath));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(morgan('dev'));
 
 //***** Template engine *****/
@@ -26,6 +28,7 @@ const indexRouter = require("./routers/indexRouter");
 const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
+const { urlencoded } = require("express");
 
 //***** Index Router  *****/
 app.use("/", indexRouter);

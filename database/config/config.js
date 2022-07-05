@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "chula#15Mc",
     "database": "museo_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -1,14 +1,34 @@
+//***** Require´s *****/
 const fs = require("fs");
 const path = require ("path");
+const DB = require('../database/models');
+const bcrypt = require('bcryptjs');
 
+//***** Salt generation *****/
+const salt = bcrypt.genSaltSync(10);
 
 const newsFilePath = path.join(__dirname, '../data/news.json');
 const news = JSON.parse(fs.readFileSync(newsFilePath, 'utf-8'));
 
+const Admin = DB.Admin;
 
 const adminController = {
     admin: (req, res) => {
         res.render("admin", {news :  news});
+    },
+
+    create: (req, res) => {
+        console.log(req.body);
+        const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
+        Admin.create({
+            email: req.body.email,
+            password: passwordEncrypted,
+            password_conf: passwordEncrypted,
+            status: 1
+        })
+        .then(admin => {
+            res.redirect('/admin');
+        })
     }
 };
 

@@ -1,8 +1,15 @@
-const express = require("express");
-const router = express.Router();
-
+//***** Require´s *****/
+const { Router } = require("express");
 const adminController = require("../controllers/adminController");
 
-router.get("/", adminController.admin);
+//***** Router initialization *****/
+const router = Router();
+
+//***** Getting Admin view *****/
+router.get('/', adminController.admin);
+
+//***** Creating a new Admin *****/
+router.post('/register', adminController.create);
+
 
 module.exports = router;

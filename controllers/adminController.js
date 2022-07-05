@@ -41,6 +41,19 @@ const adminController = {
                 data: admins
             });
         });
+    },
+
+    details: (req, res) => {
+        const adminId = req.params.id;
+        Admin.findByPk(adminId)
+        .then(admin => {
+            return res.status(200).json({
+                meta: {
+                    status: 200
+                },
+                data: admin
+            });
+        });
     }
 };
 

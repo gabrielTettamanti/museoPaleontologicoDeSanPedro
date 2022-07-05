@@ -14,4 +14,7 @@ router.post('/register', adminController.create);
 //***** Getting All Admins *****/
 router.get('/list', adminController.list);
 
+//***** Getting One Admin by id *****/
+router.get('/details/:id', adminController.details);
+
 module.exports = router;

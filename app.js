@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 
 //***** Server initialization  *****/
 const app = express();
@@ -17,6 +18,7 @@ const publicPath = path.resolve(__dirname, 'public');
 app.use( express.static(publicPath));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 
 //***** Template engine *****/

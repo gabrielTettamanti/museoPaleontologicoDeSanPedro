@@ -17,4 +17,7 @@ router.get('/list', adminController.list);
 //***** Getting One Admin by id *****/
 router.get('/details/:id', adminController.details);
 
+//***** Updating Admin by id *****/
+router.put('/update/:id', adminController.update);
+
 module.exports = router;

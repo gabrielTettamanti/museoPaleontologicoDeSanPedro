@@ -54,6 +54,27 @@ const adminController = {
                 data: admin
             });
         });
+    },
+
+    update: (req, res) => {
+        const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
+        const adminId = req.params.id;
+        const adminUpdated = {
+            password: passwordEncrypted,
+            password_conf: passwordEncrypted
+        }
+        Admin.update(adminUpdated, {
+            where: {id: adminId}
+        })
+        .then(admin => {
+            return res.status(200).json({
+                meta: {
+                    status: 200,
+                    message: 'Admin updated'
+                },
+                data: admin
+            });
+        });
     }
 };
 

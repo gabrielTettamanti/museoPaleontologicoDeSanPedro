@@ -75,6 +75,24 @@ const adminController = {
                 data: admin
             });
         });
+    },
+
+    delete: (req, res) => {
+        const adminId = req.params.id;
+        const adminUpdated = {
+            status: 0
+        }
+        Admin.update(adminUpdated, {
+            where: {id: adminId}
+        })
+        .then(admin => {
+            return res.status(200).json({
+                meta: {
+                    status: 200,
+                    message: 'Admin deleted'
+                }
+            });
+        });
     }
 };
 

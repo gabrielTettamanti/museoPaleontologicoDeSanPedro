@@ -20,4 +20,7 @@ router.get('/details/:id', adminController.details);
 //***** Updating Admin by id *****/
 router.put('/update/:id', adminController.update);
 
+//***** Deleting Admin by id *****/
+router.delete('/delete/:id', adminController.delete);
+
 module.exports = router;

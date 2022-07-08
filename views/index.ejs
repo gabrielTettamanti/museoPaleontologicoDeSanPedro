@@ -69,10 +69,12 @@
             </div>
         </div>
 
-        <div class="section containerRoute">
-            <h3 class="sponsors">Sponsors</h3>
-            <%- include("partials/sponsorsCarousel", { sponsors: listaSponsors}) %>
-        </div>
+        <% if (listaSponsors.length > 0) { %>
+            <div class="section containerRoute">
+                <h3 class="sponsors">Sponsors</h3>
+                <%- include("partials/sponsorsCarousel", { sponsors: listaSponsors}) %>
+            </div>
+        <% } %>
 
         <div class="section containerRoute">
             <%- include("partials/footer") %>

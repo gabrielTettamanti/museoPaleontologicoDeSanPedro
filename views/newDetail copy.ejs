@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+
+<body class="bodyAdmin">
+ 
+    <main id="fullPage">        
+        
+        <div class="section">
+            
+            <div class="new">
+                <div class="new-title">
+                    <h1 class="title">
+                        <%= newDetails.title %>
+                    </h1> 
+                    <h5 class="date">
+                        <%= newDetails.date %> 
+                    </h5>
+                </div>
+        
+                <div class="image-container">
+                    <img src="/img/news/<%= newDetails.img %>">
+                </div>
+        
+                <article class="new-body">
+                    <p><%= newDetails.text %></p>
+                </article>
+                <div class="new-title">
+                    <h1 class="title">
+                        Status: <%= newDetails.status %>
+                    </h1>                    
+                </div>
+            </div>
+
+            <a href="/news/edit/<%= newDetails.id %> ">
+                <button class="button-create-news"><i class="fa-solid fa-check"></i> Editar</button>
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
+        integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/newsModal.js"></script>
+</body>
+
+</html>

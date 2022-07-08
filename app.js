@@ -4,11 +4,7 @@ const path = require("path");
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 
-//***** Server initialization  *****/
-const app = express();
 
-//***** Server configuration  *****/
-app.set('port', 8000);
 
 //***** Running up server  *****/
 app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));
@@ -32,6 +28,26 @@ const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
 const { urlencoded } = require("express");
 
+//***** Server initialization  *****/
+const app = express();
+
+//***** Template engine *****/
+app.set("views", path.resolve(__dirname, "views"));
+app.set("view engine", "ejs");
+
+// Para los formulatios POST
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
+
+// Para los formularios PUT y DELETE
+app.use(methodOverride('_method'));
+
+//***** Middlewares  *****/
+//const publicPath = path.resolve(__dirname, 'public');
+app.use( express.static(publicPath));
+app.use(morgan('dev'));
+
+
 //***** Index Router  *****/
 app.use("/", indexRouter);
 
@@ -43,3 +59,9 @@ app.use("/museum", museumRouter);
 
 //***** Admin router  *****/
 app.use("/admin", adminRouter);
+
+//***** Server configuration  *****/
+app.set('port', 8000);
+
+//***** Running up server  *****/
+app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));

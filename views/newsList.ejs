@@ -4,22 +4,22 @@
 
 <body class="bodyIndex">
 
-    <%- include ('partials/header') %>
-    <div class="botonContacto">
-        <a class="fixedButton" href="/news/list/#secondPage">
-            <h6>Contacto<i class="fa-solid fa-location-dot"></i></h6>
-        </a>
-    </div> 
 
     <main id="fullPage">
         <div class="section">
+            <a href="/admin"> Ir a Admin</a>
             <h1 class=" news-title">SECCION DE NOTICIAS</h1>
             <%- include ("partials/cards") %> 
+
+            <a href="/news/create/">
+                <button class="button-create-news"><i class="fa-solid fa-check"></i> Crear Noticia</button>
+            </a>
+
         </div>
 
-        <div class="section containerRoute">
-            <%- include("partials/footer") %>
-        </div>
+       
+            
+        
     </main>
     
     

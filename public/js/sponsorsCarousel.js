@@ -17,7 +17,7 @@ $forwardSlide.addEventListener('click', () => {
     }
 
     sponsorsSlides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * (index - currentSlide) }%)`;
+        slide.style.transform = `translateX(${100 * (index - currentSponsor) }%)`;
     });
 });
 
@@ -29,6 +29,6 @@ $backSlide.addEventListener('click', () => {
     }
 
     sponsorsSlides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * (index -currentSlide) }%)`;
+        slide.style.transform = `translateX(${100 * (index - currentSponsor) }%)`;
     });
 });

@@ -1,7 +1,7 @@
 <section class="carousel">
 
     <% for( let index = 0; index < sponsors.length; index+=3 ) { %>
-        <div class="slide-carousel" id="sponsor-slide">
+        <div class="sponsor-carousel" id="sponsor-slide">
             <%- include('./sponsorCard', { sponsor: sponsors[index] }) %> 
             <% if (sponsors[index + 1] != undefined) { %>
                 <%- include('./sponsorCard', { sponsor: sponsors[index + 1] }) %>

@@ -36,19 +36,26 @@ input.barra-espacios {
   border-radius: 5px;
   margin-left: 5%;
 }
+
 input.barra-espacios:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 input.barra-espacios:focus {
   color: #F5F5F5;
 }
 
-input::-moz-placeholder {
+input::-webkit-input-placeholder {
   color: #F5F5F5;
   text-align: center;
 }
 
 input:-ms-input-placeholder {
+  color: #F5F5F5;
+  text-align: center;
+}
+
+input::-ms-input-placeholder {
   color: #F5F5F5;
   text-align: center;
 }
@@ -65,6 +72,8 @@ input::placeholder {
 }
 
 label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 25%;
   color: #F5F5F5;
@@ -73,7 +82,9 @@ label {
 }
 
 input.recordar-usuario {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   verticle-align: middle;
   margin-right: 5px;
   margin-left: 5px;
@@ -93,6 +104,7 @@ input.recordar-usuario {
   text-shadow: 0px 1px 0px #ffffff;
   margin-top: 10px;
 }
+
 .button-login:hover {
   background-color: #dfdfdf;
 }
@@ -125,9 +137,11 @@ input.news-title {
   padding: 5px;
   border-radius: 5px;
 }
+
 input.news-title:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
+
 input.news-title:focus {
   color: #dfdfdf;
 }
@@ -144,9 +158,11 @@ input.news-date {
   padding: 5px;
   border-radius: 5px;
 }
+
 input.news-date:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
+
 textarea {
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 15px;
@@ -157,18 +173,24 @@ textarea {
   padding: 5px;
   border-radius: 5px;
 }
+
 textarea:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
+
 textarea:focus {
   color: #F5F5F5;
 }
 
-::-moz-placeholder {
+::-webkit-input-placeholder {
   color: #F5F5F5;
 }
 
 :-ms-input-placeholder {
+  color: #F5F5F5;
+}
+
+::-ms-input-placeholder {
   color: #F5F5F5;
 }
 
@@ -177,6 +199,8 @@ textarea:focus {
 }
 
 .button-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -196,6 +220,7 @@ textarea:focus {
   text-shadow: 0px 1px 0px #ffffff;
   margin-top: 10px;
 }
+
 .button-create-news:hover {
   background-color: #dfdfdf;
 }
@@ -215,6 +240,8 @@ textarea:focus {
   text-shadow: 0px 1px 0px #ffffff;
   margin-top: 10px;
 }
+
 .button-delete-news:hover {
   background-color: #dfdfdf;
-}/*# sourceMappingURL=admin.css.map */
+}
+/*# sourceMappingURL=admin.css.map */

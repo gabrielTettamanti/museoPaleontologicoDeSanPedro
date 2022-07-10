@@ -9,41 +9,65 @@ main {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 main .new-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 5%;
 }
+
 main .new-container .new {
   margin-bottom: 5%;
   width: 70%;
   background-color: white;
   border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 main .new-container .new .new-title {
   padding: 15px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
+
 main .new-container .new .new-title .title {
   font-size: 34px;
 }
+
 main .new-container .new .new-title .date {
   font-size: 18px;
 }
+
 main .new-container .new .image-container {
   width: 40%;
 }
+
 main .new-container .new .image-container img {
   width: 100%;
 }
+
 main .new-container .new .new-body {
   width: 50%;
   font-size: 16px;
-}/*# sourceMappingURL=newDetail.css.map */
+}
+/*# sourceMappingURL=newDetail.css.map */

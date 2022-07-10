@@ -1,5 +1,7 @@
+<% const images = ['Glyptodon.jpg', 'pya2.jpg', 'thePlatensis.jpg'] %> 
+
 <div class="images-container">
-    <img src="/img/Glyptodon.jpg" alt="" class="index-image">
-    <img src="/img/pya2.jpg" alt="" class="index-image">
-    <img src="/img/thePlatensis.jpg" alt="" class="index-image">
+    <% images.forEach(image => { %>
+        <img src="/img/<%= image %>" alt="" class="index-image">
+    <% }) %>
 </div>

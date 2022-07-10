@@ -337,7 +337,7 @@ div.standardButton a i {
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 12px;
+  border-radius: 15px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

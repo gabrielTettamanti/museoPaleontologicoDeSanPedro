@@ -9,7 +9,7 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.TEXT(100), allowNull: false
         },
         img: {
-            type: dataTypes.TEXT(100), allowNull: true
+            type: dataTypes.TEXT(100)
         },        
         status: {
             type: dataTypes.INTEGER(11), allowNull: false

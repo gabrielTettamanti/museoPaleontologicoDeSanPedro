@@ -55,6 +55,25 @@
 
         </div>
 
+        <div class="section">
+            <a href="/sponsors/list"> Ver lista de Sponsors</a>
+            <form method="POST" action="/admin/sponsors/create" enctype="multipart/form-data" class="form-sponsor">
+                <div class="create-sponsor">
+                <label class="label-create-sponsor">Crear Sponsor</label>
+                    <div class="create-sponsor">
+                        <input type="text" name="name" placeholder="Nombre">
+                        <input type="text" name="status" placeholder="activo/inactivo">
+                        <input type="file" name="img" accept=".jpg, .png, .jpeg">
+                    </div>
+                    <div>
+                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
+                            <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                        </div>
+                    </div>
+            </form>
+
+        </div>
+
         <!-- <div class="section">
                 
         </div> -->

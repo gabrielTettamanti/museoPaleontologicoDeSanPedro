@@ -39,6 +39,12 @@ CREATE TABLE IF NOT EXISTS `museo_db`.`sponsores` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+INSERT INTO museo_db.sponsores(id, name, img, status) 
+VALUES 
+(1, "Ferreteria El Clavo", "ferreteria.JPG", 1), 
+(2, "Lavadero El Sucio", "lavanderia.JPG", 1), 
+(3, "Panaderia El Tito", "panaderia.JPG", 1), 
+(4, "Supermercado Ava", "supermercado.JPG", 1);
 
 -- -----------------------------------------------------
 -- Table `museo_db`.`administrators`

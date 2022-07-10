@@ -27,6 +27,7 @@ const indexRouter = require("./routers/indexRouter");
 const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
+const sponsorRouter = require("./routers/sponsorRouter")
 const { urlencoded } = require("express");
 
 
@@ -58,6 +59,10 @@ app.use("/museum", museumRouter);
 
 //***** Admin router  *****/
 app.use("/admin", adminRouter);
+
+//***** Sponsor router  *****/
+app.use("/admin/sponsors", sponsorRouter);
+
 
 //***** Running up server  *****/
 app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));

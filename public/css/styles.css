@@ -93,13 +93,15 @@ div.standardButton:hover i {
           animation-timing-function: ease;
   background-color: rgba(0, 0, 0, 0.5647058824);
 }
-div.standardButton a {
+div.standardButton .navigation {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
   color: white;
   font-size: 20px;
   text-decoration: none;
   padding: 0px 10px 0px 0px;
 }
-div.standardButton a i {
+div.standardButton .navigation i {
   margin: 0px 10px 0px 0px;
   padding: 10px 12px;
   border: solid 2px #4f4f4f;

@@ -5,13 +5,25 @@ const Subscriber = DB.Subscriber;
 
 const subscriberController = {
     store: (req, res) => {
-        console.log(req.body);
         Subscriber.create({
             email: req.body.emailSubscription,
             status: 1
         })
         .then(sub => {
             res.redirect('/');
+        });
+    },
+
+    list: (req, res) => {
+        Subscriber.findAll()
+        .then(subs => {
+            res.status(200).json({
+                meta: {
+                    status: 200,
+                    total: subs.length
+                },
+                data: subs
+            })
         });
     }
 }

@@ -65,7 +65,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `museo_db`.`subscribers` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(100) NULL,
-  `staus` INT NULL,
+  `status` INT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

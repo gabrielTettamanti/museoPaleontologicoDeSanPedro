@@ -27,7 +27,8 @@ const indexRouter = require("./routers/indexRouter");
 const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
-const sponsorRouter = require("./routers/sponsorRouter")
+const sponsorRouter = require("./routers/sponsorRouter");
+const subsRouter = require('./routers/subscriberRouter');
 const { urlencoded } = require("express");
 
 
@@ -59,6 +60,8 @@ app.use("/museum", museumRouter);
 
 //***** Admin router  *****/
 app.use("/admin", adminRouter);
+
+app.use('/subs', subsRouter);
 
 //***** Sponsor router  *****/
 app.use("/admin/sponsors", sponsorRouter);

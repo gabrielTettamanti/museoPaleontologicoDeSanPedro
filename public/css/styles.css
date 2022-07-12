@@ -1,7 +1,6 @@
 @charset "UTF-8";
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0px;
 }
 
@@ -29,7 +28,7 @@ home {
 /** NAVIGATION BAR */
 #navigationBar {
   overflow: hidden;
-  background-color: #4f4f4f30;
+  background-color: rgba(79, 79, 79, 0.1882352941);
   position: fixed;
   top: 0px;
   left: 0%;
@@ -38,41 +37,31 @@ home {
   border-radius: 0px 0px 0px 0px;
   border: solid 0px #4f4f4f;
 }
-
 #navigationBar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
-
 #navigationBar ul li {
   display: inline;
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   padding: 5px 0px 5px 0px;
   border-radius: 10px;
 }
-
 #navigationBar ul a {
   color: #f2f2f2;
   text-decoration: none;
 }
-
 #navigationBar ul .homeButton {
-  -ms-grid-column-align: left;
-      justify-self: left;
+  justify-self: left;
   padding: 10px 10px 10px 10px;
   margin-left: 0px;
-  background-color: #4f4f4f40;
+  background-color: rgba(79, 79, 79, 0.2509803922);
   border-right: 1px solid #4f4f4f;
   border-radius: 0px;
 }
@@ -84,22 +73,17 @@ div.standardButton {
   margin-bottom: 10%;
   border: 2px solid #4f4f4f;
   border-radius: 100px;
-  background-color: #00000020;
+  background-color: rgba(0, 0, 0, 0.1254901961);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 div.standardButton:hover {
-  background-color: #00000060;
+  background-color: rgba(0, 0, 0, 0.3764705882);
 }
-
 div.standardButton:hover i {
   -webkit-animation-name: anchorMove;
           animation-name: anchorMove;
@@ -107,72 +91,58 @@ div.standardButton:hover i {
           animation-duration: 2s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  background-color: #00000090;
+  background-color: rgba(0, 0, 0, 0.5647058824);
 }
-
 div.standardButton a {
   color: white;
   font-size: 20px;
   text-decoration: none;
   padding: 0px 10px 0px 0px;
 }
-
 div.standardButton a i {
   margin: 0px 10px 0px 0px;
   padding: 10px 12px;
   border: solid 2px #4f4f4f;
   border-radius: 100px;
-  background-color: #00000040;
-  -webkit-transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.2509803922);
   transition: 0.5s;
 }
 
 @-webkit-keyframes anchorMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: rotate(400deg);
-            transform: rotate(400deg);
+    transform: rotate(400deg);
   }
   50% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
+    transform: rotate(330deg);
   }
   80% {
-    -webkit-transform: rotate(380deg);
-            transform: rotate(380deg);
+    transform: rotate(380deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes anchorMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-    -webkit-transform: rotate(400deg);
-            transform: rotate(400deg);
+    transform: rotate(400deg);
   }
   50% {
-    -webkit-transform: rotate(330deg);
-            transform: rotate(330deg);
+    transform: rotate(330deg);
   }
   80% {
-    -webkit-transform: rotate(380deg);
-            transform: rotate(380deg);
+    transform: rotate(380deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 /* contact button */
 .botonContacto {
   display: none;
@@ -187,16 +157,13 @@ div.standardButton a i {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background-color: #00000020;
-  -webkit-transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.1254901961);
   transition: 0.5s;
 }
-
 .botonContacto:hover {
-  background-color: #00000060;
+  background-color: rgba(0, 0, 0, 0.3764705882);
   color: #ffffff;
 }
-
 .botonContacto:hover i {
   -webkit-animation-name: gpsMove;
           animation-name: gpsMove;
@@ -205,62 +172,49 @@ div.standardButton a i {
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
 }
-
 .botonContacto .fixedButton {
   font-size: 18px;
   color: white;
 }
-
 .botonContacto .fixedButton i {
   margin-left: 10px;
 }
 
 @-webkit-keyframes gpsMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   15% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   35% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
+    transform: rotate(20deg);
   }
   70% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes gpsMove {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   15% {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   35% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
+    transform: rotate(20deg);
   }
   70% {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    transform: rotate(-15deg);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-
 /* CARDS */
 .card-link {
   text-decoration: none;
@@ -301,9 +255,7 @@ div.standardButton a i {
 }
 
 .see-news {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 /*SPONSOR CARD*/
@@ -311,7 +263,6 @@ div.standardButton a i {
   height: 50%;
   width: 15rem;
 }
-
 .sponsor-card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -322,222 +273,155 @@ div.standardButton a i {
 .images-container {
   width: 80%;
   height: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
 .images-container .index-image {
   width: 30%;
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .images-container .index-image:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*Style footer*/
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   color: #f5f5f5;
 }
-
 .footer ul {
   padding: 0px;
 }
-
 .footer ul li {
   list-style: none;
   margin: 0 25px 22.7px 0px;
   font-size: 22px;
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
   width: 100%;
   padding: 1px 1px 1px 0px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .footer ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 300px;
   color: #f5f5f5;
   text-decoration: none;
 }
-
 .footer ul li i {
-  background-color: #00000040;
+  background-color: rgba(0, 0, 0, 0.2509803922);
   padding: 15px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .footer ul .topLi:hover,
 .footer ul .centerLi:hover,
 .footer ul .bottomLi:hover {
-  background-color: #00000080;
+  background-color: rgba(0, 0, 0, 0.5019607843);
   font-size: 23px;
   padding: 0.4px 0.5px 0.5px 0.5px;
 }
-
 .footer ul .topLi:hover:hover .fa-phone,
 .footer ul .centerLi:hover:hover .fa-phone,
 .footer ul .bottomLi:hover:hover .fa-phone {
   color: #000000;
-  background-color: #f9f9f995;
+  background-color: rgba(249, 249, 249, 0.5843137255);
   padding: 15px 15px 15px 40px;
 }
-
 .footer ul .topLi:hover:hover .fa-whatsapp,
 .footer ul .centerLi:hover:hover .fa-whatsapp,
 .footer ul .bottomLi:hover:hover .fa-whatsapp {
   color: #000000;
-  background-color: #25D36695;
+  background-color: rgba(37, 211, 102, 0.5843137255);
   padding: 15px 15px 15px 40px;
 }
-
 .footer ul .topLi:hover:hover .fa-envelope,
 .footer ul .centerLi:hover:hover .fa-envelope,
 .footer ul .bottomLi:hover:hover .fa-envelope {
   color: #000000;
-  background-color: #DB443795;
+  background-color: rgba(219, 68, 55, 0.5843137255);
   padding: 15px 15px 15px 40px;
 }
-
 .footer ul .topLi:hover:hover .fa-facebook-f,
 .footer ul .centerLi:hover:hover .fa-facebook-f,
 .footer ul .bottomLi:hover:hover .fa-facebook-f {
   color: #000000;
-  background-color: #4267B295;
+  background-color: rgba(66, 103, 178, 0.5843137255);
   padding: 15px 15px 15px 40px;
 }
-
 .footer ul .topLi:hover:hover .fa-instagram,
 .footer ul .centerLi:hover:hover .fa-instagram,
 .footer ul .bottomLi:hover:hover .fa-instagram {
   color: #000000;
-  background-color: #E1306C95;
+  background-color: rgba(225, 48, 108, 0.5843137255);
   padding: 15px 15px 15px 40px;
 }
-
 .footer ul .topLi {
   border-radius: 30px 0 0 0;
 }
-
 .footer ul .topLi i {
   border-radius: 100px 100px 100px 0;
 }
-
 .footer ul .centerLi i {
   border-radius: 0px 100px 100px 0;
 }
-
 .footer ul .bottomLi {
   border-radius: 0 0 0 30px;
 }
-
 .footer ul .bottomLi i {
   border-radius: 0 100px 100px 100px;
 }
-
 .footer .sectionFooter {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
-
 .footer .sectionFooter h2 {
   text-align: center;
 }
-
 .footer .sectionFooter .contactsP {
   padding: 10px 25px 10px 15px;
   margin: 0;
 }
-
 .footer .sectionFooter .containerIframe {
   text-align: left;
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
   border-radius: 0 50px 100px 0;
   padding: 13px 10px 0 0;
 }
-
 .footer .sectionFooter .containerIframe p {
   padding: 0 5px;
 }
-
 .footer .sectionFooter .containerIframe iframe {
   width: 97%;
   height: 300px;
   margin: 5px;
   border-radius: 0 10px 75px 0;
 }
-
 .footer .formSubscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
 .footer .formSubscription form {
-  background-color: #6363637e;
+  background-color: rgba(99, 99, 99, 0.4941176471);
   border-radius: 100px;
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 2px;
 }
-
 .footer .formSubscription form input {
   width: inherit;
   padding-left: 5%;
@@ -545,18 +429,31 @@ div.standardButton a i {
   border: none;
   color: #f5f5f5;
 }
-
 .footer .formSubscription form input:focus {
   outline: none;
 }
-
 .footer .formSubscription form button {
   background: none;
   border: none;
 }
-
-.footer .formSubscription form button i {
+.footer .formSubscription form button .fa-check {
+  border: solid 1px #f5f5f5;
+  border-radius: 100px;
   color: #f5f5f5;
+  padding: 10px;
+  transition: 1s;
+}
+.footer .formSubscription form button .fa-check:hover {
+  padding: 9px;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: rgba(0, 255, 0, 0.5019607843);
+  -webkit-animation-name: gpsMove;
+          animation-name: gpsMove;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 @media (min-width: 439px) {
@@ -572,7 +469,6 @@ div.standardButton a i {
     border-radius: 10px;
   }
 }
-
 @media (min-width: 769px) {
   .row {
     margin: 70px;
@@ -585,16 +481,12 @@ div.standardButton a i {
     left: 80%;
   }
   .footer .sectionFooter {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .footer .sectionFooter li {
     width: 95%;
   }
 }
-
 @media (min-width: 1024px) {
   #navigationBar {
     left: 10%;
@@ -604,11 +496,10 @@ div.standardButton a i {
     font-size: 17px;
     padding: 10px 50px 10px 50px;
     border-radius: 10px;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
   #navigationBar ul .viewButton:hover {
-    background-color: #00000060;
+    background-color: rgba(0, 0, 0, 0.3764705882);
     padding: 9px 47px 9px 47px;
     font-size: 18px;
   }
@@ -617,18 +508,16 @@ div.standardButton a i {
     text-decoration: none;
   }
   #navigationBar ul .homeButton {
-    -ms-grid-column-align: left;
-        justify-self: left;
+    justify-self: left;
     padding: 10px 14px 10px 14px;
     margin-left: 0px;
-    background-color: #4f4f4f40;
+    background-color: rgba(79, 79, 79, 0.2509803922);
     border-right: 1px solid #4f4f4f;
     border-radius: 0px;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
   #navigationBar ul .homeButton:hover {
-    background-color: #00000060;
+    background-color: rgba(0, 0, 0, 0.3764705882);
     padding: 7px 11.5px 7px 11.5px;
     font-size: 21px;
   }
@@ -649,13 +538,11 @@ div.standardButton a i {
     width: inherit;
   }
 }
-
 @media (min-width: 1200px) {
   .botonContacto {
     left: 85%;
   }
 }
-
 @media (min-width: 1440px) {
   .botonContacto {
     left: 90%;
@@ -669,5 +556,4 @@ div.standardButton a i {
   .footer .sectionFooter .containerIframe iframe {
     height: 364px;
   }
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

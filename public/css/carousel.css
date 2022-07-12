@@ -72,22 +72,102 @@
   align-items: center;
   border: solid 2px #4f4f4f;
   border-radius: 150px;
-  color: #4f4f4f;
+  color: #f5f5f5;
   font-size: 20px;
   position: absolute;
   top: 50%;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .carousel .carousel-button:active {
   transform: scale(1.1);
 }
 .carousel .carousel-button:hover {
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5019607843);
   cursor: pointer;
 }
 .carousel .back {
   left: 5%;
 }
+.carousel .back:hover i {
+  position: relative;
+  -webkit-animation-name: buttonAnimationBack;
+          animation-name: buttonAnimationBack;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
 .carousel .forward {
   right: 5%;
+}
+.carousel .forward:hover i {
+  position: relative;
+  -webkit-animation-name: buttonAnimationForward;
+          animation-name: buttonAnimationForward;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes buttonAnimationForward {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 3px;
+  }
+  90% {
+    left: -2px;
+  }
+  100% {
+    left: -1px;
+  }
+}
+
+@keyframes buttonAnimationForward {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 3px;
+  }
+  90% {
+    left: -2px;
+  }
+  100% {
+    left: -1px;
+  }
+}
+@-webkit-keyframes buttonAnimationBack {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: 3px;
+  }
+  90% {
+    right: -2px;
+  }
+  100% {
+    right: -1px;
+  }
+}
+@keyframes buttonAnimationBack {
+  0% {
+    right: 0px;
+  }
+  50% {
+    right: 3px;
+  }
+  90% {
+    right: -2px;
+  }
+  100% {
+    right: -1px;
+  }
 }/*# sourceMappingURL=carousel.css.map */

@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 .bodyAdmin {
   background-image: url(../img/fotofondoPrueba.jpg);
   background-repeat: no-repeat;
@@ -5,87 +10,66 @@
   background-size: 110%;
 }
 
-/* primera parte del home */
-.formAdmin {
-  margin-left: 5%;
-  position: relative;
-  z-index: 1;
+/* LOG IN ADMIN */
+.form-admin {
+  display: block;
   width: 90%;
-  padding: 45px;
+  margin: auto;
 }
-
-h3.login-title {
-  text-align: center;
-  color: #F5F5F5;
-  margin-bottom: 5%;
+.form-admin .login-title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  color: #f5f5f5;
 }
-
-/* log in form */
-div.login-form {
-  width: 90%;
-}
-
-input.barra-espacios {
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 15px;
-  outline: 0;
-  border: 0;
-  width: 90%;
-  margin: 0 0 15px;
+.form-admin .input-login {
+  margin: 10px auto;
+  width: 100%;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  border: solid 2px rgba(245, 245, 245, 0.5019607843);
+  border-radius: 100px;
   padding: 5px;
-  border-radius: 5px;
-  margin-left: 5%;
-}
-input.barra-espacios:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-input.barra-espacios:focus {
-  color: #F5F5F5;
-}
-
-input::-moz-placeholder {
-  color: #F5F5F5;
   text-align: center;
 }
-
-input:-ms-input-placeholder {
-  color: #F5F5F5;
-  text-align: center;
+.form-admin .input-login:focus {
+  color: #f5f5f5;
 }
-
-input::placeholder {
-  color: #F5F5F5;
-  text-align: center;
-}
-
-.remember-login {
-  text-align: center;
-  font-size: 16px;
-  margin: 15px 0px;
-}
-
-label {
+.form-admin .login-button {
   display: flex;
-  width: 25%;
-  color: #F5F5F5;
-  margin-left: 45%;
-  margin-bottom: 5px;
+  flex-direction: row;
+  align-items: center;
+  width: 15%;
+  margin: 10px 42.5%;
+  padding: 2.5px;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  border: solid 2px rgba(245, 245, 245, 0.5019607843);
+  border-radius: 100px;
+  color: #f5f5f5;
+  font-size: 18px;
+  transition: 0.5s;
 }
-
-input.recordar-usuario {
-  align-self: center;
-  verticle-align: middle;
-  margin-right: 5px;
-  margin-left: 5px;
+.form-admin .login-button:hover {
+  background-color: rgba(0, 255, 0, 0.5019607843);
+  border: 2px solid rgba(0, 255, 0, 0.5019607843);
 }
-
-.button-login-page {
-  position: absolute;
-  top: 50%;
-  left: 43%;
+.form-admin .login-button:hover .fa-user {
+  font-weight: bold;
+  font-size: 19px;
 }
-.button-login-page .button-login .fa-user {
-  padding: 10px 10px;
+.form-admin .login-button:hover p {
+  font-weight: bold;
+  font-size: 19px;
+}
+.form-admin .login-button .fa-user {
+  justify-self: left;
+  padding: 10px 10px 10px 10px;
+  transition: 0.5s;
+}
+.form-admin .login-button p {
+  margin: auto;
+  transition: 0.5s;
 }
 
 /* formulario crear noticias */

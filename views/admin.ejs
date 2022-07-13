@@ -11,11 +11,17 @@
         <div class="section" id="adminLogin">
             <form action="/admin" method="post" class="form">
                 <div id="login">
-                    <h4 class="title">Iniciar Sesion</h4>                                        
-                    <input type="email" name="email" class="full-input" placeholder="ejemplo@email.com">                                                    
-                    <br>
-                    <input type="password" name="password" class="full-input" placeholder="Contraseña">                                                   
-                    <button type="submit" class="button"><i class="fa-solid fa-user"></i><p>Iniciar sesión</p></button>                    
+                    <div>
+                        <h4 class="title">Iniciar Sesion</h4>
+                    </div>
+                    <div>                                     
+                        <input type="email" name="email" class="input" placeholder="ejemplo@email.com">                                                                        
+                        <br>
+                        <input type="password" name="password" class="input" placeholder="Contraseña">  
+                    </div>  
+                    <div>                                               
+                        <button type="submit" class="button"><i class="fa-solid fa-user"></i><p>Iniciar sesión</p></button>  
+                    </div>                  
                 </div>
           </form>
         </div>
@@ -23,23 +29,25 @@
         <div class="section">
 
             <a href="/news/list"> Ver lista de Noticias</a>
-            <form method="POST" action="/" enctype="multipart/form-data" class="formAdmin">
+            <form method="POST" action="/" enctype="multipart/form-data" class="form">
                 <div class="create-news">
-                <legend class="legend-create-news">Crear Producto</legend>
-                    <div class="create-news">
-                        <input type="text" name="news_title" class="news-title" placeholder="Título">
-                        <input type="date" name="news_date" class="news-date">
+                <h4 class="legend-create-news title">Crear Producto</h4>
+                    <div class="admin-container">
+                        <input type="text" name="news_title" class="news-title input mid" placeholder="Título">
+                        <input type="date" name="news_date" class="news-date input mid">
                     </div>
                     <div class="create-news">
-                        <textarea name="news_description" class="news-description" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
+                        <textarea name="news_description" class="news-description input" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
                     </div>
         
-                    <div class="button-news">
-                        <input type="file" name="news_image" accept=".jpg, .png">
-                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
-                            <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
-                        </div>
+                    <div class="buttons-container" id="">
+                        <input type="file" name="news_image" accept=".jpg, .png" class="file-input">
+                        <!-- <div class=""> -->
+                            <button type="submit" class="button-create-news button news-buttons" id=""><i class="fa-solid fa-check"></i><p>Crear</p></button>
+                            <button type="reset" class="button-delete-news button news-buttons" id=""><i class="fa-solid fa-trash-can"></i><p>Deshacer</p></button>
+                        <!-- </div> -->
                     </div>
+                </div>
             </form>
 
         </div>

@@ -8,7 +8,7 @@
 
     <main id="fullPage">
 
-        <section>
+        <div class="section">
         <form action="/admin" method="post">
             <div id="section login">
                 <h3 class="login-title">Iniciar Sesion</h3>
@@ -30,9 +30,9 @@
             </div>
             </div>
         </form>
-    </section>
+    </div>
 
-<section>
+<div class="section">
     <form method="POST" action="/" enctype="multipart/form-data" >
         <div class="section create-news">
         <legend class="legend-create-news">Crear Producto</legend>
@@ -51,8 +51,58 @@
                 </div>
             </div>
 </form>
-</section>
+</div>
 
+<div class="section">
+    <form action="/admin" method="post">
+        <div id="section login">
+            <h3 class="login-title"><i class="fa-solid fa-user"></i>Crear Admin</h3>
+            <div id="login-form">
+                <div id="login-form">
+                    <div class="email-login">
+                        <input type="email" name="email" class="barra-espacios" placeholder="ejemplo@email.com" >              
+                    </div>
+                    <div class="password-login">
+                        <br>
+                        <input type="password" name="password" class="barra-espacios" placeholder="Contraseña">
+                    </div>
+                    <div class="password-login">
+                        <br>
+                        <input type="password" name="password" class="barra-espacios" placeholder="Confirmar Contraseña">
+                    </div>
+                    <div class="button-user">
+                            <button type="submit" class="button-create-user"><i class="fa-solid fa-check"></i>Crear</button>
+                            <button type="reset" class="button-delete-user"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                        </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+<div class="section">
+        <div id="edit-news-admin">
+            <h3 class="edit-title">Editar</h3>
+            <div id="edit-news">
+                <div class="edit-newsAdmin-container">
+                   <a href="/admin"><h2 class="tab-l">Noticias</h2></a> 
+                   <a href="/admin"><h2 class="tab-r">Admins</h2></a>
+                </div> 
+                    <div class="search-bar">
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i><input type="search" placeholder="Buscar productos..."/>                
+                    </div>
+                    </div>
+                <div class="news-containers">
+                    <button class="news-container"><span>Noticia</span></button>
+                    <button class="news-container"><span>Noticia</span></button>
+                    <button class="news-container"><span>Noticia</span></button>
+                    <button class="news-container"><span>Noticia</span></button>
+                    <button class="news-container"><span>Noticia</span></button>
+                    <button class="news-container"><span>Noticia</span></button>
+                    </div>
+        </div>
+        </div>
+</div>
 
 
 </main>

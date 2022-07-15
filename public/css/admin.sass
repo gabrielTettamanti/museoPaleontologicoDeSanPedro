@@ -9,7 +9,6 @@
     background-size: 110%
 
 .form
-       display: block
        width: 90%
        margin: auto
        .title
@@ -19,7 +18,7 @@
        .input
               margin: 10px auto
               width: 100%
-              color: #000000
+              color: #f5f5f5
               background-color: #00000060
               border: solid 2px #f5f5f580
               border-radius: 100px
@@ -28,6 +27,7 @@
               &:focus
                      color: #f5f5f5
        .mid
+              display: inline
               margin: 10px 0px
               justify-self: center 
               width: 49%
@@ -35,12 +35,12 @@
        .news-description
               border-radius: 15px
        .button
-              display: flex
+              display: inline
               flex-direction: row
               align-items: center
-              width: 15%
+              width: 15% 
               margin: 10px  42.5%
-              padding: 2.5px
+              padding: 5px
               background-color: #00000060
               border: solid 2px #f5f5f580
               border-radius: 100px
@@ -50,32 +50,26 @@
               &:hover
                      background-color: #00FF0080
                      border: 2px solid #00FF0080
-              &:hover i
-                     font-weight: bold
-                     font-size: 19px
-              &:hover p
-                     font-weight: bold
-                     font-size: 19px
               i
+                     display: inline
                      justify-self: left
-                     padding: 10px 10px 10px 10px
                      transition: 0.5s
+                     margin: 0px 10px 0px 0px
                      
               p
+                     display: inline
                      margin: auto
                      transition: 0.5s
 
 
- 
 
-/* formulario crear noticias */
-
-
-.admin-container
-       display: flex
-       justify-content: space-between
-       input
-              width: 20%
-       .news-buttons
-              width: 20%
-              margin: 0px
+#submit-button
+       position: absolute
+       left: 15%
+       width: 10%
+#reset-button
+       position: absolute
+       width: 10%
+       &:hover
+              background-color: #ff000080
+              border: #ff000080 2px solid

@@ -29,6 +29,7 @@ const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
 const sponsorRouter = require("./routers/sponsorRouter");
 const subsRouter = require('./routers/subscriberRouter');
+const errorRouter = require("./routers/errorRouter");
 const { urlencoded } = require("express");
 
 
@@ -66,6 +67,25 @@ app.use('/subs', subsRouter);
 //***** Sponsor router  *****/
 app.use("/admin/sponsors", sponsorRouter);
 
+//***** error 404 router  *****/
+app.use("/404", errorRouter);
+
 
 //***** Running up server  *****/
 app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));
+
+
+// ** catch 404 and forward to error handler **
+app.use((req, res, next) => next(createError(404)));
+
+// ** error handler **
+app.use((err, req, res, next) => {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.path = req.path;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});

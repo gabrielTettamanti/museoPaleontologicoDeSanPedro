@@ -29,6 +29,7 @@
   font-size: 14px;
   font-family: sans-serif;
   margin-bottom: 0;
+  padding: 1%;
 }
 .containerRoute .signTxtImg .imgHistory {
   display: none;

@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 
 //***** Server initialization  *****/
 const app = express();
@@ -9,12 +10,12 @@ const app = express();
 //***** Server configuration  *****/
 app.set('port', 8000);
 
-//***** Running up server  *****/
-app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));
-
 //***** Middlewares  *****/
 const publicPath = path.resolve(__dirname, 'public');
 app.use( express.static(publicPath));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 
 
@@ -28,6 +29,27 @@ const newsRouter = require("./routers/newsRouter");
 const museumRouter = require("./routers/museumRouter");
 const adminRouter = require("./routers/adminRouter");
 const errorRouter = require("./routers/errorRouter");
+const sponsorRouter = require("./routers/sponsorRouter");
+const subsRouter = require('./routers/subscriberRouter');
+const { urlencoded } = require("express");
+
+
+//***** Template engine *****/
+app.set("views", path.resolve(__dirname, "views"));
+app.set("view engine", "ejs");
+
+// Para los formulatios POST
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }))
+
+// Para los formularios PUT y DELETE
+app.use(methodOverride('_method'));
+
+//***** Middlewares  *****/
+//const publicPath = path.resolve(__dirname, 'public');
+app.use( express.static(publicPath));
+app.use(morgan('dev'));
+
 
 //***** Index Router  *****/
 app.use("/", indexRouter);
@@ -58,3 +80,11 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error');
 });
+app.use('/subs', subsRouter);
+
+//***** Sponsor router  *****/
+app.use("/admin/sponsors", sponsorRouter);
+
+
+//***** Running up server  *****/
+app.listen(app.get('port'), () => console.log(`Server up & running in port ${app.get('port')}`));

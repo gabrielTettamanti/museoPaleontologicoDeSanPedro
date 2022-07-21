@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+
+<body class="bodyAdmin">
+ 
+    <main id="fullPage">        
+        
+        <div class="section">
+            
+            <form method="POST" action="/news/create" enctype="multipart/form-data" class="formAdmin">
+                <div class="create-news">
+                <legend class="legend-create-news">Crear Noticia</legend>
+                    <div class="create-news">
+                        <label for="title">Titulo </label>
+                        <input type="text" name="title" class="news-title" placeholder="Título">
+                        <label for="date">Fecha </label>
+                        <input type="date" name="date" class="news-date">
+                        <label for="text">Detalle </label>
+                        <textarea name="text" class="news-description" rows="5" cols="100" placeholder="Detalle"></textarea>
+                        <label for="img">Subir Imagen </label>
+                        <input type="file" name="img" accept=".jpg, .png">
+                    </div>
+        
+                    <div class="button-news">                        
+                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
+                    </div>
+            </form>
+            <form action="/news/list/" method="GET">
+                <button type="submit" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Cancelar</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
+        integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/newsModal.js"></script>
+</body>
+
+</html>

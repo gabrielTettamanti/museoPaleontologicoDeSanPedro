@@ -17,26 +17,43 @@
 </head>
 <body>
 
-    <%- include ('partials/header') %>
-
     <main>
 
-        <div class="new-title">
-            <h1>
-                <%= newDetails.title %>
-            </h1> 
-            <h5>
-                <%= newDetails.date %> 
-            </h5>
-        </div>
+        <section class="new-container">
 
-        <div class="image-container">
-            <img src="/img/news/<%= newDetails.image %>">
-        </div>
+            <div class="new">
+                <div class="new-title">
+                    <h1 class="title">
+                        <%= newDetails.title %>
+                    </h1> 
+                    <h5 class="date">
+                        <%= newDetails.date %> 
+                    </h5>
+                </div>
+        
+                <div class="image-container">
+                    <img src="/img/news/<%= newDetails.img %>">
+                </div>
+        
+                <article class="new-body">
+                    <p><%= newDetails.text %></p>
+                </article>
+                <div class="new-title">
+                    <h1 class="title">
+                        Status: <%= newDetails.status %>
+                    </h1>                    
+                </div>
+                <a href="/news/edit/<%= newDetails.id %> ">
+                    <button class="button-create-news"><i class="fa-solid fa-check"></i> Editar</button>
+                </a>
+                <a href="/news/list/">
+                    <button class="button-create-news"><i class="fa-solid fa-check"></i> Lista de Noticias</button>
+                </a>
+            </div>
 
-        <article class="new-body">
-            <p><%= newDetails.content %></p>
-        </article>
+            
+
+        </section>
 
     </main>
     

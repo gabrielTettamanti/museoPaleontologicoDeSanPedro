@@ -3,6 +3,10 @@ const router = express.Router();
 
 const museumController = require("../controllers/museumController");
 
-router.get("/tour", museumController.list);
+/* Museum Tour */ 
+router.get("/tour", museumController.tour);
+
+/* Countryside visit */
+router.get("/visit", museumController.visit)
 
 module.exports = router;

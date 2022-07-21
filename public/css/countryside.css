@@ -1,0 +1,48 @@
+.bodyCountrysideVisit {
+  background-image: url(../img/countrysideVisit.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 110%;
+}
+
+.containerFossilization {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.containerFossilization .fossilizationCard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(245, 245, 245, 0.5019607843);
+  padding: 5px;
+  border-radius: 10px;
+  width: 90vw;
+  justify-content: center;
+}
+.containerFossilization .fossilizationCard .containerImgFossil {
+  width: 100%;
+}
+.containerFossilization .fossilizationCard .containerImgFossil .imgCardFossil {
+  width: inherit;
+}
+
+@media (min-width: 768px) {
+  .containerFossilization {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .containerFossilization .fossilizationCard {
+    width: 45vw;
+    margin: 10px 5px;
+  }
+}
+@media (min-width: 1020px) {
+  .containerFossilization .fossilizationCard {
+    width: 20vw;
+  }
+}/*# sourceMappingURL=countryside.css.map */

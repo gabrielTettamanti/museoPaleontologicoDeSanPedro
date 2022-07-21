@@ -1,6 +1,6 @@
-const slides = document.querySelectorAll('.slide-carousel');
-const $forwardButton = document.querySelector('.forward');
-const $backButton = document.querySelector('.back');
+const slides = document.querySelectorAll('#slide-carousel');
+const $forwardButton = document.querySelector('#forward');
+const $backButton = document.querySelector('#back');
 
 let currentSlide = 0;
 let maxSlides = slides.length - 1;

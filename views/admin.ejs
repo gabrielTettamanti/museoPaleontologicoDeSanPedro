@@ -3,11 +3,12 @@
 <%- include ('partials/head') %>
 
 <body class="bodyAdmin">
-    <%- include ('partials/header') %>
-    <%- include ("partials/contactButton") %> 
+    
+    <%- include ('partials/header') %> 
 
     <main id="fullPage">
 
+<<<<<<< HEAD
         <div class="section">
         <form action="/admin" method="post">
             <div id="section login">
@@ -25,8 +26,24 @@
                             <div class="checkbox-u"><label><input type="checkbox" name="recordar-usuario" class="recordar-usuario">Recordarme</label>
                     </div>
                     <div class="button-login-page"><button type="submit" class="button-login"><i class="fa-solid fa-user"></i>Iniciar Sesion</button>
+=======
+        <div class="section" id="adminLogin">
+            <form action="/admin" method="post" class="form">
+                <div id="login">
+                    <div>
+                        <h4 class="title">Iniciar Sesion</h4>
+>>>>>>> d5d339f152e7ddb52b400fed4f1533493470eb5a
                     </div>
+                    <div>                                     
+                        <input type="email" name="email" class="input" placeholder="ejemplo@email.com">                                                                        
+                        <br>
+                        <input type="password" name="password" class="input" placeholder="Contraseña">  
+                    </div>  
+                    <div>                                               
+                        <button type="submit" class="button"><i class="fa-solid fa-user"></i><p>Iniciar sesión</p></button>  
+                    </div>                  
                 </div>
+<<<<<<< HEAD
             </div>
             </div>
         </form>
@@ -103,20 +120,71 @@
         </div>
         </div>
 </div>
+=======
+          </form>
+        </div>
+        
+        <div class="section">
 
+            <a href="/news/list"> Ver lista de Noticias</a>
+            <form method="POST" action="/" enctype="multipart/form-data" class="form">
+                <div class="create-news">
+                <h4 class="legend-create-news title">Crear Producto</h4>
+                    <div class="admin-container">
+                        <input type="text" name="news_title" class="news-title input mid" placeholder="Título">
+                        <input type="date" name="news_date" class="news-date input mid">
+                    </div>
+                    <div class="create-news">
+                        <textarea name="news_description" class="news-description input" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
+                    </div>
+        
+                    <div class="buttons-container" id="">
+                        <input type="file" name="news_image" accept=".jpg, .png" class="file-input">
+                        <!-- <div class=""> -->
+                        <button type="submit" class="button-create-news button" id="submit-button"><i class="fa-solid fa-check"></i><p>Crear</p></button>
+                        <button type="reset" class="button-delete-news button" id="reset-button"><i class="fa-solid fa-trash-can"></i><p>Deshacer</p></button>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </form>
 
-</main>
+        </div>
+>>>>>>> d5d339f152e7ddb52b400fed4f1533493470eb5a
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
-    integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/js/fullPage.js"></script>
-<!-- <script src="/js/carousel.js"></script>
-<script src="/js/newsModal.js"></script>  -->
+        <div class="section">
+            <a href="/sponsors/list"> Ver lista de Sponsors</a>
+            <form method="POST" action="/admin/sponsors/create" enctype="multipart/form-data" class="form-sponsor">
+                <div class="create-sponsor">
+                <label class="label-create-sponsor">Crear Sponsor</label>
+                    <div class="create-sponsor">
+                        <input type="text" name="name" placeholder="Nombre">
+                        <input type="text" name="status" placeholder="activo/inactivo">
+                        <input type="file" name="img" accept=".jpg, .png, .jpeg">
+                    </div>
+                    <div>
+                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
+                            <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                        </div>
+                    </div>
+            </form>
 
+        </div>
+
+        <!-- <div class="section">
+                
+        </div> -->
+        
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.js"
+        integrity="sha512-Ql+BI+ZJBJ9b8dZ5FKuyCz42y0ZcG05muq5tHIfb0Qxe0TlEtGkYXV8Df7h6HbJolt6Rhz6gRMBLypwX6slbzw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/fullPage.js"></script>
+    <script src="/js/carousel.js"></script>
+    <script src="/js/newsModal.js"></script>
 </body>
 
 </html>

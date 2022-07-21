@@ -4,15 +4,19 @@
 
 <body class="bodyMuseumTour">
     <%- include ('partials/header') %>
-    <%- include ("partials/contactButton") %> 
+    <div class="botonContacto">
+        <a class="fixedButton" href="/museum/tour/#fourthPage">
+            <h6>Contacto<i class="fa-solid fa-location-dot"></i></h6>
+        </a>
+    </div>
 
     <main id="fullPage">
         <div class="section parteUnoHome">
             <h1 class="nombreDelMuseo">Museo Paleontológico de San Pedro</h1>
             <hr class="solid">
             <h2 class="subtituloHome">...un viaje imaginario a un pasado fascinante</h2>
-            <div class="anchorNavigation">
-                <a class="navigation" href="#novedades"><i class="fa-solid fa-arrow-down"></i>Piezas destacadas</a>
+            <div class="standardButton">
+                <a class="navigation" href="/museum/tour/#thirdPage"><i class="fa-solid fa-arrow-down"></i>Piezas destacadas</a>
             </div>
         </div>
 
@@ -53,11 +57,11 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section containerRoute">
             <%- include("partials/cards") %>
         </div>
 
-        <div class="section">
+        <div class="section containerRoute">
             <%- include("partials/footer") %>
         </div>
 

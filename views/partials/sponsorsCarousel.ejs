@@ -1,0 +1,23 @@
+<section class="carousel">
+
+    <% for( let index = 0; index < sponsors.length; index+=3 ) { %>
+        <div class="sponsor-carousel" id="sponsor-slide">
+            <%- include('./sponsorCard', { sponsor: sponsors[index] }) %> 
+            <% if (sponsors[index + 1] != undefined) { %>
+                <%- include('./sponsorCard', { sponsor: sponsors[index + 1] }) %>
+            <% } %> 
+            <% if (sponsors[index + 2] != undefined) { %>
+                <%- include('./sponsorCard', { sponsor: sponsors[index + 2] }) %>
+            <% } %>
+        </div>
+    <% } %>
+
+    <div class="back carousel-button" id="back-sponsor">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
+
+    <div class="forward carousel-button" id="forward-sponsor">
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+</section>

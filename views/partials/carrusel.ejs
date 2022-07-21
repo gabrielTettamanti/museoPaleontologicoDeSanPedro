@@ -1,16 +1,16 @@
 <section class="carousel">
 
     <% news.forEach(noticia => { %>
-        <div class="slide-carousel">
+        <div class="slide-carousel" id="slide-carousel">
             <%- include('./carruselCard', {noticia}) %> 
         </div>
     <% }) %>
 
-    <div class="back carousel-button">
+    <div class="back carousel-button" id="back">
         <i class="fa-solid fa-arrow-left"></i>
     </div>
 
-    <div class="forward carousel-button">
+    <div class="forward carousel-button" id="forward">
         <i class="fa-solid fa-arrow-right"></i>
     </div>
 </section>

@@ -8,21 +8,42 @@
 .containerFossilization {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
+  align-content: flex-start;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
 .containerFossilization .fossilizationCard {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: rgba(245, 245, 245, 0.5019607843);
   padding: 5px;
   border-radius: 10px;
-  width: 90vw;
-  justify-content: center;
+  width: 250px;
+  background-color: rgba(245, 245, 245, 0.5019607843);
+  height: 350px;
+  transition: 0.5s;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.containerFossilization .fossilizationCard .fosil-info {
+  color: rgba(0, 0, 0, 0);
+  visibility: hidden;
+  opacity: 0;
+}
+.containerFossilization .fossilizationCard .fosil-info p {
+  transition: 0.2s;
+  transition-delay: 0.5s;
+}
+.containerFossilization .fossilizationCard:hover {
+  height: 450px;
+}
+.containerFossilization .fossilizationCard:hover .fosil-info {
+  display: inline;
+  color: #000;
+  visibility: visible;
+  opacity: 1;
 }
 .containerFossilization .fossilizationCard .containerImgFossil {
   width: 100%;
@@ -37,12 +58,13 @@
     justify-content: space-around;
   }
   .containerFossilization .fossilizationCard {
-    width: 45vw;
-    margin: 10px 5px;
+    width: 450px;
+    margin: 150px 5px 10px 5px;
   }
 }
 @media (min-width: 1020px) {
   .containerFossilization .fossilizationCard {
-    width: 20vw;
+    width: 400px;
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=countryside.css.map */

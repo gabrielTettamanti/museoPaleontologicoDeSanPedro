@@ -2,28 +2,23 @@
 <html lang="en">
 <%- include ('partials/head') %>
 
-<body class="bodyAdmin">
-  
-    <main id="fullPage">
-            <form method="POST" action="/news/edit/<%= noticia.id %>?_method=PUT" enctype="multipart/form-data" class="news-form-container">
-                <legend class="legend-news-form"><p>Editando Noticia</p><i class="fa-solid fa-pen-to-square"></i></legend>
-                <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
-                <label for="title" class="label-news-form">Titulo: </label>
-                <input type="text" name="title" value="<%= noticia.title %>" class="input-news-form" placeholder="Título">
-                <label for="date" class="label-news-form">Fecha: </label>
-                <input type="date" name="date" value="<%= noticia.date %>" class="input-news-form">
-                <label for="text" class="label-news-form">Detalle: </label>
-                <textarea name="text" class="input-news-form detail-input-news-form" rows="5" cols="100" placeholder="Detalle"><%= noticia.text %></textarea>
-                <label for="img" class="label-news-form">Subir Imagen: </label>
-                <input type="file" name="img" accept=".jpg, .png" class="input-news-form img-input">
-                <label for="status" class="label-news-form">Status: </label>
-                <input type="number" name="status" value="<%= noticia.status %>" class="input-news-form" placeholder="Status">
-                <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
-            </form>
-    </main>
-    <script src="/js/fullPage.js"></script>
-    <script src="/js/carousel.js"></script>
-    <script src="/js/newsModal.js"></script>
-</body>
-
+    <body class="bodyAdmin">
+        <main id="fullPage">
+                <form method="POST" action="/news/edit/<%= noticia.id %>?_method=PUT" enctype="multipart/form-data" class="news-form-container">
+                    <legend class="legend-news-form"><p>Editando Noticia</p><i class="fa-solid fa-pen-to-square"></i></legend>
+                    <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
+                    <label for="title" class="label-news-form">Titulo: </label>
+                    <input type="text" name="title" value="<%= noticia.title %>" class="input-news-form" placeholder="Título">
+                    <label for="date" class="label-news-form">Fecha: </label>
+                    <input type="date" name="date" value="<%= noticia.date %>" class="input-news-form">
+                    <label for="text" class="label-news-form">Detalle: </label>
+                    <textarea name="text" class="input-news-form detail-input-news-form" rows="5" cols="100" placeholder="Detalle"><%= noticia.text %></textarea>
+                    <label for="img" class="label-news-form">Subir Imagen: </label>
+                    <input type="file" name="img" accept=".jpg, .png" class="input-news-form img-input">
+                    <label for="status" class="label-news-form">Status: </label>
+                    <input type="number" name="status" value="<%= noticia.status %>" class="input-news-form" placeholder="Status">
+                    <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
+                </form>
+        </main>
+    </body>
 </html>

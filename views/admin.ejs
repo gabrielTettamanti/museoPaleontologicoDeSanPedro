@@ -26,9 +26,24 @@
           </form>
         </div>
         
-        <div class="section">
+        <!-- <div class="section">
 
             <a href="/news/list"> Ver lista de Noticias</a>
+
+            <form method="POST" action="/" enctype="multipart/form-data" class="news-form-container">
+                <legend class="legend-news-form"><p>Creando Noticia</p><i class="fa-solid fa-pen-to-square"></i></legend>
+                <label for="title" class="label-news-form">Titulo: </label>
+                <input type="text" name="news_title" class="input-news-form" placeholder="Título">
+                <label for="date" class="label-news-form">Fecha: </label>
+                <input type="date" name="news_date" class="input-news-form">
+                <label for="text" class="label-news-form">Detalle: </label>
+                <textarea name="news_description" class="input-news-form detail-input-news-form" rows="5" cols="100" placeholder="Detalle"></textarea>
+                <label for="img" class="label-news-form">Subir Imagen: </label>
+                <input type="file" name="news_image" accept=".jpg, .png" class="input-news-form img-input">
+                <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
+                <button type="reset" class="button-delete-news button" id="reset-button"><i class="fa-solid fa-trash-can"></i><p>Deshacer</p></button>
+            </form>
+
             <form method="POST" action="/" enctype="multipart/form-data" class="form">
                 <div class="create-news">
                 <h4 class="legend-create-news title">Crear Producto</h4>
@@ -39,18 +54,15 @@
                     <div class="create-news">
                         <textarea name="news_description" class="news-description input" rows="5" cols="100" placeholder="lorem ipsum"></textarea>
                     </div>
-        
                     <div class="buttons-container" id="">
                         <input type="file" name="news_image" accept=".jpg, .png" class="file-input">
-                        <!-- <div class=""> -->
                         <button type="submit" class="button-create-news button" id="submit-button"><i class="fa-solid fa-check"></i><p>Crear</p></button>
                         <button type="reset" class="button-delete-news button" id="reset-button"><i class="fa-solid fa-trash-can"></i><p>Deshacer</p></button>
-                        <!-- </div> -->
                     </div>
                 </div>
             </form>
 
-        </div>
+        </div> -->
 
         <div class="section">
             <a href="/sponsors/list"> Ver lista de Sponsors</a>

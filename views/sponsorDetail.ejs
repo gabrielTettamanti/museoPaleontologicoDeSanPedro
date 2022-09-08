@@ -38,27 +38,30 @@
                         Status: <%= sponsor.status %>
                     </h1>                    
                 </div>
-                <a href="/admin/sponsors/edit/<%= sponsor.id %> ">
-                    <button class="button-create-news"><i class="fa-solid fa-check"></i> Editar</button>
+                <a href="/sponsors/detail/<%= sponsor.id %> ">
+                    <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Editar</button>
                 </a>
-                <a href="/admin/sponsors/list/">
+                <a href="/sponsors/list/">
                     <button class="button-create-news"><i class="fa-solid fa-check"></i> Lista de sponsors</button>
                 </a>
             </div>
 
-            <form method="POST" action="/admin/sponsors/detail/:id" enctype="multipart/form-data" class="form-sponsor">
+            <form method="POST" action="/sponsors/detail/<%= sponsor.id %> " enctype="multipart/form-data" class="form-sponsor">
                 <div class="create-sponsor">
-                <label class="label-create-sponsor">Editar Sponsor</label>
+                    <label class="label-create-sponsor">Editar Sponsor</label>
                     <div class="create-sponsor">
+                        <label>Nombre:</label>
                         <input type="text" name="name" value="<%= sponsor.name %> ">
+                        <label>Status:</label>
                         <input type="text" name="status" value="<%= sponsor.status %> ">
+                        <label>Imagen:</label>
                         <input type="file" name="img" value="<%= sponsor.img %> " accept=".jpg, .png, .jpeg">
                     </div>
-                    <div>
-                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Crear</button>
+                        <div>
+                            <button type="submit" class="button-create-news"><i class="fa-solid fa-check"></i>Editar</button>
                             <button type="reset" class="button-delete-news"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
                         </div>
-                    </div>
+                </div>
             </form>
 
         </section>

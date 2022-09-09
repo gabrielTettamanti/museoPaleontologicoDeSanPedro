@@ -66,7 +66,7 @@ app.use("/admin", adminRouter);
 app.use('/subs', subsRouter);
 
 //***** Sponsor router  *****/
-app.use("/admin/sponsors", sponsorRouter);
+app.use("/sponsors", sponsorRouter);
 
 //***** error 404 router  *****/
 app.use("/404", errorRouter);

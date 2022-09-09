@@ -16,10 +16,8 @@ router.post('/create',uploadSponsor.single('img'), sponsorController.save)
 //***** ver detalles del sponsor *****/
 router.get('/detail/:id', sponsorController.detail);
 
+// Actualizar sponsor
+router.post('/detail/:id',uploadSponsor.single('img'), sponsorController.edit)
 
-
-// // Actualizar sponsor
-// router.get('/edit/:id', sponsorController.edit)
-// router.put('/edit/:id',uploadSponsor.single('img'), sponsorController.update)
 
 module.exports = router;

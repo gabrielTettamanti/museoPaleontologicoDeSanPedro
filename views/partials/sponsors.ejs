@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-md-3 g-3">
+    <% sponsors.forEach(sponsor => { %>
+        <div class="col">
+            <a href="/sponsors/detail/<%= sponsor.id %>" class="card-link">
+                <div class="card h-100">
+                    <img src="/img/sponsors/<%= sponsor.img %> " class="card-img-top">
+                    <div class="card-body ">
+                        <h4 class="card-title" > <%= sponsor.name %> </h4>
+                        <p class="card-title"> <%= sponsor.status %> </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+</div>

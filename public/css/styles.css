@@ -36,34 +36,33 @@ home {
   width: 100%;
   border-radius: 0px 0px 0px 0px;
   border: solid 0px #4f4f4f;
-}
-#navigationBar ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   padding: 0px;
   margin: 0px;
 }
-#navigationBar ul li {
+#navigationBar .viewButton {
   display: inline;
   font-family: "Fira Sans", sans-serif;
   font-size: 16px;
   text-align: center;
   align-content: center;
+  margin: auto;
   padding: 5px 0px 5px 0px;
   border-radius: 10px;
 }
-#navigationBar ul a {
-  color: #f2f2f2;
-  text-decoration: none;
-}
-#navigationBar ul .homeButton {
+#navigationBar .homeButton {
   justify-self: left;
   padding: 10px 10px 10px 10px;
   margin-left: 0px;
   background-color: rgba(79, 79, 79, 0.2509803922);
   border-right: 1px solid #4f4f4f;
   border-radius: 0px;
+}
+#navigationBar .homeButton p, #navigationBar .viewButton p {
+  margin: 0px;
 }
 
 /* main */
@@ -458,7 +457,7 @@ div.standardButton .navigation i {
           animation-timing-function: ease;
 }
 
-@media (min-width: 439px) {
+@media (min-width: 666px) {
   #navigationBar {
     top: 10px;
     left: 5%;
@@ -466,7 +465,7 @@ div.standardButton .navigation i {
     border-radius: 10px 10px 10px 10px;
     border: solid 2px #4f4f4f;
   }
-  #navigationBar ul li {
+  #navigationBar .viewButton {
     max-width: 25%;
     border-radius: 10px;
   }
@@ -489,27 +488,24 @@ div.standardButton .navigation i {
     width: 95%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1312px) {
   #navigationBar {
     left: 10%;
     width: 80%;
   }
-  #navigationBar ul li {
+  #navigationBar .viewButton {
     font-size: 17px;
     padding: 10px 50px 10px 50px;
     border-radius: 10px;
     transition: 0.5s;
   }
-  #navigationBar ul .viewButton:hover {
+  #navigationBar .viewButton:hover {
     background-color: rgba(0, 0, 0, 0.3764705882);
     padding: 9px 47px 9px 47px;
     font-size: 18px;
+    color: #f5f5f5;
   }
-  #navigationBar ul .viewButton:hover a {
-    color: #f2f2f2;
-    text-decoration: none;
-  }
-  #navigationBar ul .homeButton {
+  #navigationBar .homeButton {
     justify-self: left;
     padding: 10px 14px 10px 14px;
     margin-left: 0px;
@@ -518,10 +514,11 @@ div.standardButton .navigation i {
     border-radius: 0px;
     transition: 0.5s;
   }
-  #navigationBar ul .homeButton:hover {
+  #navigationBar .homeButton:hover {
     background-color: rgba(0, 0, 0, 0.3764705882);
     padding: 7px 11.5px 7px 11.5px;
     font-size: 21px;
+    color: #f5f5f5;
   }
   .botonContacto {
     left: 85%;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+
+<body class="bodyAdmin">
+
+    <%- include ('partials/header') %>
+
+    <main id="fullPage">    
+        <div class="section">
+            <form method="POST" action="/sponsors/create" enctype="multipart/form-data" class="form-sponsor news-form-container">
+                <legend class="legend-news-form"><p>Crear Sponsor</p><i class="fa-solid fa-circle-plus"></i></legend>
+                <label for="name" class="label-news-form">Nombre: </label>
+                <input type="text" name="name" placeholder="Nombre" class="input-news-form">
+                <label for="status" class="label-news-form">Status: </label>
+                <input type="text" name="status" placeholder="activo/inactivo" class="input-news-form">
+                <label for="img" class="label-news-form">Subir Imagen: </label>
+                <input type="file" name="img" accept=".jpg, .png, .jpeg" class="input-news-form img-input">
+                <div class="create-sponsor-buttons">
+                    <button type="submit" class="button-create-news submit-button-news-form"><i class="fa-solid fa-check"></i>Crear</button>
+                    <button type="reset" class="button-delete-news cancel-changes-sponsor-form"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>

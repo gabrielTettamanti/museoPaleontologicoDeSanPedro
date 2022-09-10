@@ -65,6 +65,10 @@ home {
   margin: 0px;
 }
 
+.editarImagen {
+  width: 300px;
+}
+
 /* main */
 /* anchor navegación */
 div.standardButton {

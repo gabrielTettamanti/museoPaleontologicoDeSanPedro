@@ -3,6 +3,9 @@ const db = require ('../database/models/index');
 const {Op} = require('sequelize')
 
 const sponsorController = {
+    create: (req, res) =>{
+        res.render('create_sponsors')
+    },
     list: (req, res) => {
        
         db.Sponsor.findAll({
@@ -31,6 +34,13 @@ const sponsorController = {
         })
     },
     edit: (req, res) => {
+        let sponsorId = req.params.id;
+        db.Sponsor.findByPk(sponsorId)
+        .then(sponsor => {
+            res.render('edit_sponsors', {sponsor});
+        })
+    },
+    update: (req, res) => {
         let sponsorId = req.params.id;
         let image;
         if(!req.file){

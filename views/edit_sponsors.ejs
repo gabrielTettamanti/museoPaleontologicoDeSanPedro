@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+    <body class="bodyAdmin">
+        <%- include ('partials/header') %>
+        <main id="fullPage">
+                <form method="POST" action="/sponsors/edit/<%= sponsor.id %>" enctype="multipart/form-data" class="news-form-container">
+                    <legend class="legend-news-form"><p>Editar Sponsor</p><i class="fa-solid fa-pen-to-square"></i></legend>
+                    <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
+                    <label for="name" class="label-news-form">Nombre: </label>
+                    <input type="text" name="name" value="<%= sponsor.name %>" class="input-news-form" placeholder="Nombre">
+                    <label for="status" class="label-news-form">Status: </label>
+                    <input type="text" name="status" value="<%= sponsor.status %>" class="input-news-form" placeholder="Status">
+                    <label for="img" class="label-news-form">Imagen: </label>
+                    <img src="/img/sponsors/<%= sponsor.img %> " class="editarImagen">
+                    <input type="file" name="img" value="<%= sponsor.img %> " accept=".jpg, .png, .jpeg, .webp" class="input-news-form img-input">
+                    <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Editar</button>
+                </form>
+        </main>
+    </body>
+</html>
+
+

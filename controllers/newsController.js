@@ -1,13 +1,17 @@
+//***** Require´s *****/
 const fs = require("fs");
 const path = require ("path");
-const db = require('../database/models')
+const DB = require('../database/models');
+const { Op } = require('sequelize');
 
 const newsFilePath = path.join(__dirname, '../data/news.json');
 const news = JSON.parse(fs.readFileSync(newsFilePath, 'utf-8'));
 
+const New = DB.Noticia;
+
 const newsController = {
     list: (req, res) => {
-        db.Noticia.findAll({
+        New.findAll({
             where: {
                 status: 1
             }
@@ -22,14 +26,14 @@ const newsController = {
     },
     detail: (req, res) => {
         const newId = req.params.id;        
-        db.Noticia.findByPk(newId)
+        New.findByPk(newId)
             .then(noticia => {
                 res.render('newDetail', {newDetails: noticia});
             })
        
     },
     crear: (req, res) => {
-        db.Noticia.findAll()
+        New.findAll()
             .then(noticias => {
             //console.log("🚀 ~ file: newsController.js ~ line 20 ~ noticias", noticias)
                 res.render('create_news')
@@ -42,7 +46,7 @@ const newsController = {
         //req.body
         //console.log("🚀 ~ file: newsController.js ~ line 28 ~ req.body", req.body)
         //console.log("🚀 ~ file: newsController.js ~ line 29 ~ req.file", req.file)
-        db.Noticia.create({
+        New.create({
             ...req.body,   
             img: req.file.filename,         
             status: 1
@@ -56,7 +60,7 @@ const newsController = {
 
     },
     editar: (req, res) => {
-        db.Noticia.findByPk(req.params.id)
+        New.findByPk(req.params.id)
             .then(noticia => {
                 res.render('edit_news', {noticia})
             })
@@ -67,7 +71,7 @@ const newsController = {
     },
     actualizar: (req, res) => {
         console.log("🚀 ~ file: newsController.js ~ line 71 ~ req.body", req.body)
-        db.Noticia.update({
+        New.update({
             ...req.body,
             
         }, {
@@ -76,6 +80,28 @@ const newsController = {
             }
         })
         .then(() => res.redirect('/news/detail/' + req.params.id))
+    },
+
+    search: (req, res) => {
+        const searched = req.query.search;
+        New.findAll({
+            where: {
+                status: 1,
+                title: { [Op.like] : `%${searched}%`}
+            }
+        })
+            .then(newFinded => {
+                console.log(newFinded);
+                return res.status(200).json({
+                    data: newFinded
+                });
+            })
+            .catch(error => {
+                return res.status(400).json({
+                    message: error.message
+                });
+            });
+
     }
 };
 

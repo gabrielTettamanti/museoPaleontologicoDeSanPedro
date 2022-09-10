@@ -8,6 +8,9 @@ const uploadFile = require('../middlewares/multerMiddleware')
 
 //router.get("/", newsController.list);
 
+//***** Searching news *****/
+router.get('/search', newsController.search);
+
 //***** Getting a news detail by id *****/
 router.get('/detail/:id', newsController.detail);
 

@@ -8,6 +8,9 @@ const router = Router();
 //***** Getting Admin view *****/
 router.get('/', adminController.admin);
 
+//***** Admin Login *****/
+router.post('/login', adminController.login);
+
 //***** Creating a new Admin *****/
 router.post('/register', adminController.create);
 

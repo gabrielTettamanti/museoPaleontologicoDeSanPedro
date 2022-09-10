@@ -4,12 +4,14 @@ const path = require("path");
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const createError = require('http-errors');
+const session = require('express-session');
 
 //***** Server initialization  *****/
 const app = express();
 
 //***** Server configuration  *****/
 app.set('port', 8000);
+app.set('secret', 'Messi2022');
 
 //***** Middlewares  *****/
 const publicPath = path.resolve(__dirname, 'public');
@@ -18,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(morgan('dev'));
+app.use(session({ secret: app.get('secret') }));
 
 //***** Template engine *****/
 app.set("views", path.resolve(__dirname, "views"));

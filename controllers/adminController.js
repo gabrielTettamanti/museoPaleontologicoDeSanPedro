@@ -93,6 +93,30 @@ const adminController = {
                 }
             });
         });
+    },
+
+    login: (req, res) => {
+        const { email, password } = req.body;
+
+        Admin.findOne({
+            where: {
+                status: 1,
+                email: email
+            }
+        })
+        .then(admin => {
+            if(admin != null) {
+                console.log(admin.password);
+                if(bcrypt.compareSync(password, admin.password)) {
+                    req.session.userAdmin = admin.dataValues;
+                    res.redirect('/');
+                }
+            } 
+            res.render('admin');
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 };
 

@@ -20,51 +20,75 @@
   flex-wrap: wrap;
   padding: 5px;
   border-radius: 10px;
-  width: 250px;
+  width: 100%;
   background-color: rgba(245, 245, 245, 0.5019607843);
-  height: 350px;
-  transition: 0.5s;
   text-align: center;
   margin-bottom: 10px;
 }
-.containerFossilization .fossilizationCard .fosil-info {
-  color: rgba(0, 0, 0, 0);
-  visibility: hidden;
-  opacity: 0;
-}
-.containerFossilization .fossilizationCard .fosil-info p {
-  transition: 0.2s;
-  transition-delay: 0.5s;
-}
-.containerFossilization .fossilizationCard:hover {
-  height: 450px;
-}
-.containerFossilization .fossilizationCard:hover .fosil-info {
-  display: inline;
-  color: #000;
-  visibility: visible;
-  opacity: 1;
+.containerFossilization .fossilizationCard p {
+  font-size: 14px;
 }
 .containerFossilization .fossilizationCard .containerImgFossil {
   width: 100%;
 }
 .containerFossilization .fossilizationCard .containerImgFossil .imgCardFossil {
-  width: inherit;
+  width: 240px;
 }
 
 @media (min-width: 768px) {
   .containerFossilization {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
   .containerFossilization .fossilizationCard {
-    width: 450px;
-    margin: 150px 5px 10px 5px;
+    width: 350px;
+    margin-top: 70px;
   }
 }
-@media (min-width: 1020px) {
+@media (min-width: 1440px) {
+  .containerFossilization .fossilizationCard {
+    height: 300px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+    margin-top: 150px;
+  }
+  .containerFossilization .fossilizationCard .fosil-info {
+    color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .containerFossilization .fossilizationCard p {
+    font-size: 16px;
+    transition: 0.2s;
+    transition-delay: 0.5s;
+  }
+  .containerFossilization .fossilizationCard:hover {
+    height: 450px;
+  }
+  .containerFossilization .fossilizationCard:hover .fosil-info {
+    display: inline;
+    color: #000;
+    visibility: visible;
+    opacity: 1;
+  }
+  .containerFossilization .fossilizationCard .containerImgFossil {
+    width: 100%;
+  }
+  .containerFossilization .fossilizationCard .containerImgFossil .imgCardFossil {
+    width: 330px;
+  }
+}
+@media (min-width: 1920px) {
   .containerFossilization .fossilizationCard {
     width: 400px;
-    margin-bottom: 10px;
+    height: 350px;
+    margin-top: 200px;
+  }
+  .containerFossilization .fossilizationCard .containerImgFossil {
+    width: 100%;
+  }
+  .containerFossilization .fossilizationCard .containerImgFossil .imgCardFossil {
+    width: 390px;
   }
 }/*# sourceMappingURL=countryside.css.map */

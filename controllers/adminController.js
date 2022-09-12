@@ -22,6 +22,7 @@ const adminController = {
     },
 
     create: (req, res) => {
+        console.log(req.body)
         const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
         Admin.create({
             email: req.body.email,

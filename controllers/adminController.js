@@ -17,6 +17,10 @@ const adminController = {
         res.render("admin", {news :  news});
     },
 
+    createForm: (req, res) => {
+        res.render('create_admin');
+    },
+
     create: (req, res) => {
         const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
         Admin.create({

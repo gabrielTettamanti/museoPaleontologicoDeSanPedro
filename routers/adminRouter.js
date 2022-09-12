@@ -12,6 +12,7 @@ router.get('/', adminController.admin);
 router.post('/login', adminController.login);
 
 //***** Creating a new Admin *****/
+router.get('/register', adminController.createForm);
 router.post('/register', adminController.create);
 
 //***** Getting All Admins *****/

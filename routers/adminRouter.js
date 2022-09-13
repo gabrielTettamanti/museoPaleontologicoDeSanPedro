@@ -22,6 +22,7 @@ router.get('/list', adminController.list);
 router.get('/details/:id', adminController.details);
 
 //***** Updating Admin by id *****/
+router.get('/update/:id', adminController.editForm);
 router.put('/update/:id', adminController.update);
 
 //***** Deleting Admin by id *****/

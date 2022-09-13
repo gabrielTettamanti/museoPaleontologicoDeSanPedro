@@ -61,6 +61,14 @@ const adminController = {
         });
     },
 
+    editForm: (req, res) => {
+        let adminId = req.params.id;
+        Admin.findByPk(adminId)
+        .then(admin => {
+            res.render('edit_admin', { admin });
+        })
+    },
+
     update: (req, res) => {
         const passwordEncrypted = bcrypt.hashSync(req.body.password, salt);
         const adminId = req.params.id;
@@ -72,13 +80,14 @@ const adminController = {
             where: {id: adminId}
         })
         .then(admin => {
-            return res.status(200).json({
-                meta: {
-                    status: 200,
-                    message: 'Admin updated'
-                },
-                data: admin
-            });
+            // return res.status(200).json({
+            //     meta: {
+            //         status: 200,
+            //         message: 'Admin updated'
+            //     },
+            //     data: admin
+            // });
+            res.redirect('/admin')
         });
     },
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+
+<body class="bodyAdmin">
+    <main id="fullPage">      
+        <form method="POST" action="/admin/update/<%= admin.id %>?_method=PUT" class="news-form-container">
+            <legend class="legend-news-form"><p>Editando Administrador</p><i class="fa-solid fa-pen-to-square"></i></legend>
+            <a href="http://localhost:8000/" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
+            <label class="label-news-form">E-mail: <%= admin.email %></label>
+            <label for="password" class="label-news-form">Nueva contraseña: </label>
+            <input type="password" name="password" value="" class="input-news-form" placeholder="********">
+            <label for="password-confirm" class="label-news-form">Confirmar contraseña: </label>
+            <input type="password" name="password-confirm" value="" class="input-news-form" placeholder="********">
+            <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
+        </form>
+    </main>
+</body>
+</html>

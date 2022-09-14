@@ -370,19 +370,19 @@ div.standardButton .navigation i {
   padding: 15px 15px 15px 40px;
 }
 .footer ul .topLi {
-  border-radius: 30px 0 0 0;
+  border-radius: 0px;
 }
 .footer ul .topLi i {
-  border-radius: 100px 100px 100px 0;
+  border-radius: 0px 100px 100px 0;
 }
 .footer ul .centerLi i {
   border-radius: 0px 100px 100px 0;
 }
 .footer ul .bottomLi {
-  border-radius: 0 0 0 30px;
+  border-radius: 0px;
 }
 .footer ul .bottomLi i {
-  border-radius: 0 100px 100px 100px;
+  border-radius: 0px 100px 100px 0;
 }
 .footer .sectionFooter {
   display: flex;
@@ -397,12 +397,15 @@ div.standardButton .navigation i {
   padding: 10px 25px 10px 15px;
   margin: 0;
 }
+.footer .sectionFooter .containerContact {
+  margin-top: 70px;
+}
 .footer .sectionFooter .containerIframe {
   text-align: left;
   background-color: rgba(99, 99, 99, 0.4941176471);
   border: 1px solid #f5f5f5;
-  border-radius: 0 50px 100px 0;
-  padding: 13px 10px 0 0;
+  border-radius: 0px;
+  padding: 10px;
 }
 .footer .sectionFooter .containerIframe p {
   padding: 0 5px;
@@ -411,7 +414,7 @@ div.standardButton .navigation i {
   width: 97%;
   height: 300px;
   margin: 5px;
-  border-radius: 0 10px 75px 0;
+  border-radius: 0px;
 }
 .footer .formSubscription {
   display: flex;
@@ -461,6 +464,10 @@ div.standardButton .navigation i {
           animation-timing-function: ease;
 }
 
+.fp-watermark {
+  display: none;
+}
+
 @media (min-width: 666px) {
   #navigationBar {
     top: 10px;
@@ -474,7 +481,7 @@ div.standardButton .navigation i {
     border-radius: 10px;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .row {
     margin: 70px;
   }
@@ -490,6 +497,28 @@ div.standardButton .navigation i {
   }
   .footer .sectionFooter li {
     width: 95%;
+  }
+  .footer .sectionFooter .containerContact {
+    margin-top: 0px;
+  }
+  .footer .sectionFooter ul .topLi {
+    border-radius: 30px 0 0 0;
+  }
+  .footer .sectionFooter ul .topLi i {
+    border-radius: 100px 100px 100px 0;
+  }
+  .footer .sectionFooter ul .bottomLi {
+    border-radius: 0 0 0 30px;
+  }
+  .footer .sectionFooter ul .bottomLi i {
+    border-radius: 0 100px 100px 100px;
+  }
+  .footer .sectionFooter .containerIframe {
+    border-radius: 0 50px 100px 0;
+    padding: 13px 10px 0 0;
+  }
+  .footer .sectionFooter .containerIframe iframe {
+    border-radius: 0 10px 75px 0;
   }
 }
 @media (min-width: 1312px) {

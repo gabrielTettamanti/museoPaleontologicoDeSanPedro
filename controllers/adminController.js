@@ -14,7 +14,13 @@ const Admin = DB.Admin;
 
 const adminController = {
     admin: (req, res) => {
-        res.render("admin", {news :  news});
+        res.locals.logged = req.session.userAdmin ? true : false
+        res.render("admin");
+    },
+
+    logout: (req, res) => {
+		req.session.destroy();
+		return res.redirect('/');
     },
 
     createForm: (req, res) => {
@@ -120,9 +126,10 @@ const adminController = {
         })
         .then(admin => {
             if(admin != null) {
-                console.log(admin.password);
+                
                 if(bcrypt.compareSync(password, admin.password)) {
                     req.session.userAdmin = admin.dataValues;
+                    res.locals.logged = true
                     res.redirect('/');
                 }
             } 

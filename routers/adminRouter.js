@@ -1,6 +1,7 @@
 //***** Require´s *****/
 const { Router } = require("express");
 const adminController = require("../controllers/adminController");
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 //***** Router initialization *****/
 const router = Router();
@@ -8,15 +9,20 @@ const router = Router();
 //***** Getting Admin view *****/
 router.get('/', adminController.admin);
 
+
 //***** Admin Login *****/
 router.post('/login', adminController.login);
+
+
+//***** Admin Logout *****/
+router.post('/logout', adminController.logout)
 
 //***** Creating a new Admin *****/
 router.get('/register', adminController.createForm);
 router.post('/register', adminController.create);
 
 //***** Getting All Admins *****/
-router.get('/list', adminController.list);
+router.get('/list', adminMiddleware, adminController.list);
 
 //***** Getting One Admin by id *****/
 router.get('/details/:id', adminController.details);

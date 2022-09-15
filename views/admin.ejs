@@ -7,26 +7,36 @@
     <%- include ('partials/header') %>
 
     <main id="fullPage">
-
-        <div class="section" id="adminLogin">
-            <form action="/admin/login" method="post" class="form">
-                <div id="login">
-                    <div>
-                        <h4 class="title">Iniciar Sesion</h4>
-                    </div>
-                    <div>
-                        <input type="email" name="email" class="input" placeholder="ejemplo@email.com">
-                        <br>
-                        <input type="password" name="password" class="input" placeholder="Contraseña">
-                    </div>
-                    <div>
-                        <button type="submit" class="button"><i class="fa-solid fa-user"></i>
-                            <p>Iniciar sesión</p>
-                        </button>
-                    </div>
-                </div>
+        <%= locals.logged %> 
+        <% if (locals.logged) { %>
+            <form action="/admin/logout" method="post">
+                <button type="submit">Cerrar Session</button>
             </form>
-        </div>
+        <% } else { %>
+            <div class="section" id="adminLogin">
+                <form action="/admin/login" method="post" class="form">
+                    <div id="login">
+                        <div>
+                            <h4 class="title">Iniciar Sesion</h4>
+                        </div>
+                        <div>
+                            <input type="email" name="email" class="input" placeholder="ejemplo@email.com">
+                            <br>
+                            <input type="password" name="password" class="input" placeholder="Contraseña">
+                        </div>
+                        <div>
+                            <button type="submit" class="button"><i class="fa-solid fa-user"></i>
+                                <p>Iniciar sesión</p>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <% } %>
+         
+         
+
+        
 
         <!-- <div class="section">
 

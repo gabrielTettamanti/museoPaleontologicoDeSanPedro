@@ -18,17 +18,17 @@ router.post('/login', adminController.login);
 router.post('/logout', adminController.logout)
 
 //***** Creating a new Admin *****/
-router.get('/register', adminController.createForm);
+router.get('/register', adminMiddleware, adminController.createForm);
 router.post('/register', adminController.create);
 
 //***** Getting All Admins *****/
 router.get('/list', adminMiddleware, adminController.list);
 
 //***** Getting One Admin by id *****/
-router.get('/details/:id', adminController.details);
+router.get('/details/:id', adminMiddleware, adminController.details);
 
 //***** Updating Admin by id *****/
-router.get('/update/:id', adminController.editForm);
+router.get('/update/:id', adminMiddleware, adminController.editForm);
 router.put('/update/:id', adminController.update);
 
 //***** Deleting Admin by id *****/

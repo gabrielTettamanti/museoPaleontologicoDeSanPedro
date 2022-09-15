@@ -6,10 +6,12 @@ const news = JSON.parse(fs.readFileSync(newsFilePath, 'utf-8'));
 
 const museumController = {
     tour: (req, res) => {
-        res.render("museumTour", {news});
+        let adminLogged = !req.session.userAdmin == false
+        res.render("museumTour", {news, adminLogged});
     },
     visit: (req, res) => {
-        res.render("countryside");
+        let adminLogged = !req.session.userAdmin == false
+        res.render("countryside", { adminLogged });
     }
 };
 

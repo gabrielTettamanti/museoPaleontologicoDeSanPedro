@@ -18,5 +18,8 @@
         <a class="viewButton" href="/museum/tour"><p class="menu">Recorrida del Museo</p></a>
         <a class="viewButton" href="/museum/visit"><p class="menu">Visita al yacimiento</p></a>
         <a class="viewButton" href="/#fourthPage"><p class="menu">Quienes somos</p></a>
+        <% if (adminLogged) { %>
+            <a href="/admin" class="admin-button">Pitufo</a>
+        <% } %>
     </nav>
 </header>

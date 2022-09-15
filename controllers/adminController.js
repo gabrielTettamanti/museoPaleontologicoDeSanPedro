@@ -14,8 +14,9 @@ const Admin = DB.Admin;
 
 const adminController = {
     admin: (req, res) => {
+        let adminLogged = !req.session.userAdmin == false
         res.locals.logged = req.session.userAdmin ? true : false
-        res.render("admin");
+        res.render("admin", { adminLogged });
     },
 
     logout: (req, res) => {

@@ -10,7 +10,9 @@ const news = JSON.parse(fs.readFileSync(newsFilePath, 'utf-8'));
 
 const indexController = {
     index: (req, res) => {
-        res.render("index", { listaSponsors: sponsors , news :  news});
+        let adminLogged = !req.session.userAdmin == false
+        console.log(adminLogged);
+        res.render("index", { listaSponsors: sponsors , news :  news , adminLogged});
     }
 };
 

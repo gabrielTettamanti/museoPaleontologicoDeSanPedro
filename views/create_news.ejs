@@ -3,10 +3,13 @@
 <%- include ('partials/head') %>
 
     <body class="bodyAdmin">
+
+        <%- include ('partials/header') %>
+    
         <main id="fullPage">      
             <form method="POST" action="/news/create" enctype="multipart/form-data" enctype="multipart/form-data" class="news-form-container">
                 <legend class="legend-news-form"><p>Creando Noticia</p><i class="fa-solid fa-pen-to-square"></i></legend>
-                <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
+                <!-- <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a> -->
                 <label for="title" class="label-news-form">Titulo: </label>
                 <input type="text" name="title" value="" class="input-news-form" placeholder="Título">
                 <label for="date" class="label-news-form">Fecha: </label>
@@ -15,7 +18,10 @@
                 <textarea name="text" class="input-news-form detail-input-news-form" rows="5" cols="100" placeholder="Detalle"></textarea>
                 <label for="img" class="label-news-form">Subir Imagen: </label>
                 <input type="file" name="img" accept=".jpg, .png" class="input-news-form img-input">
-                <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
+                <div class="create-sponsor-buttons">
+                    <button type="submit" class="button-create-news submit-button-news-form"><i class="fa-solid fa-check"></i>Crear</button>
+                    <button type="reset" class="button-delete-news cancel-changes-sponsor-form"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                </div>
             </form>
         </main>
     </body>

@@ -36,7 +36,8 @@ const newsController = {
         New.findAll()
             .then(noticias => {
             //console.log("🚀 ~ file: newsController.js ~ line 20 ~ noticias", noticias)
-                res.render('create_news')
+                let adminLogged = !req.session.userAdmin == false
+                res.render('create_news', { adminLogged })
             })
             .catch(err => {
                 res.send(err)                

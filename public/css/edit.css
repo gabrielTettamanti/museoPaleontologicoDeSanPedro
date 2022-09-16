@@ -50,6 +50,9 @@
   color: #f5f5f5;
   background-color: #7dc242;
 }
+.news-form-container i {
+  margin: 0px 5px 0px 0px;
+}
 
 .cancel-changes-news-form {
   display: flex;

@@ -25,7 +25,8 @@ const adminController = {
     },
 
     createForm: (req, res) => {
-        res.render('create_admin');
+        let adminLogged = !req.session.userAdmin == false
+        res.render('create_admin', { adminLogged });
     },
 
     create: (req, res) => {

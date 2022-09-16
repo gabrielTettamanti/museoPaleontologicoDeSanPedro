@@ -7,11 +7,16 @@
     <%- include ('partials/header') %>
 
     <main id="fullPage">
-        <%= locals.logged %> 
         <% if (locals.logged) { %>
-            <form action="/admin/logout" method="post">
-                <button type="submit">Cerrar Session</button>
-            </form>
+            <div class="admin-logged-view">
+                    <div>
+                        <a class="admin-options" href="/news/create"><i class="fa-solid fa-plus"></i></i></i> Crear Noticia</a>
+                        <a class="admin-options" href="/sponsors/create"><i class="fa-solid fa-plus"></i></i></i> Crear Sponsor</a>
+                    </div>
+                    <form action="/admin/logout" method="post">
+                        <button class="admin-options" id="logout-button" type="submit">Cerrar Session <i class="fa-solid fa-door-open"></i></button>
+                    </form>
+            </div>
         <% } else { %>
             <div class="section" id="adminLogin">
                 <form action="/admin/login" method="post" class="form">

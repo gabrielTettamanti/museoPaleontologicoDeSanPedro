@@ -4,7 +4,8 @@ const {Op} = require('sequelize')
 
 const sponsorController = {
     create: (req, res) =>{
-        res.render('create_sponsors')
+        let adminLogged = !req.session.userAdmin == false
+        res.render('create_sponsors', { adminLogged })
     },
     list: (req, res) => {
        

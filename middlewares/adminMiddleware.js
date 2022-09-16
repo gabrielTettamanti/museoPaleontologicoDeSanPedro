@@ -5,7 +5,7 @@ function adminMiddleware (req, res, next){
         next()
     }else{
         res.locals.logged = false
-        return res.render('admin');
+        return res.redirect('/admin');
     }
 }
 

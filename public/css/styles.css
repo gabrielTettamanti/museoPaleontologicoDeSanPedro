@@ -64,6 +64,9 @@ home {
 #navigationBar .homeButton p, #navigationBar .viewButton p {
   margin: 0px;
 }
+#navigationBar .admin-button {
+  display: none;
+}
 
 .editarImagen {
   width: 300px;
@@ -479,6 +482,15 @@ div.standardButton .navigation i {
   #navigationBar .viewButton {
     max-width: 25%;
     border-radius: 10px;
+  }
+  #navigationBar .admin-button {
+    display: block;
+    justify-self: right;
+    padding: 10px 10px 10px 10px;
+    margin-left: 0px;
+    background-color: rgba(79, 79, 79, 0.2509803922);
+    border-left: 1px solid #4f4f4f;
+    border-radius: 0px;
   }
 }
 @media (min-width: 768px) {

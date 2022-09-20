@@ -254,6 +254,14 @@ div.standardButton .navigation i {
 }
 
 .news-title {
+  border: solid 2px #4f4f4f;
+  background-color: rgba(79, 79, 79, 0.1882352941);
+  border-radius: 15px;
+  margin: auto;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-top: 120px;
   display: block;
   text-align: center;

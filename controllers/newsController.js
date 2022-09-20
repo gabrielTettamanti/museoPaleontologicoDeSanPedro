@@ -17,7 +17,8 @@ const newsController = {
             }
         })
             .then((news) => {
-                res.render("newsList", { news });
+                let adminLogged = !req.session.userAdmin == false
+                res.render("newsList", { news, adminLogged });
             })
             .catch(err => {
                 res.send(err)

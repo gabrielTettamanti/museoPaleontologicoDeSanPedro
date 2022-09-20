@@ -17,6 +17,8 @@
 </head>
 <body>
 
+    <%- include ('partials/header') %>
+
     <main>
 
         <section class="new-container">
@@ -43,12 +45,7 @@
                         Status: <%= newDetails.status %>
                     </h1>                    
                 </div>
-                <a href="/news/edit/<%= newDetails.id %> ">
-                    <button class="button-create-news"><i class="fa-solid fa-check"></i> Editar</button>
-                </a>
-                <a href="/news/list/">
-                    <button class="button-create-news"><i class="fa-solid fa-check"></i> Lista de Noticias</button>
-                </a>
+                <a href="/news/list" class="back-news-list-button">Volver</a>
             </div>
 
             

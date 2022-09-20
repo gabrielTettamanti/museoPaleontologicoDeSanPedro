@@ -29,7 +29,8 @@ const newsController = {
         const newId = req.params.id;        
         New.findByPk(newId)
             .then(noticia => {
-                res.render('newDetail', {newDetails: noticia});
+                let adminLogged = !req.session.userAdmin == false
+                res.render('newDetail', {newDetails: noticia, adminLogged});
             })
        
     },

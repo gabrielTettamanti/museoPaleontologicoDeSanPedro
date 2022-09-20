@@ -13,7 +13,7 @@ main .new-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 5%;
+  padding-top: 80px;
 }
 main .new-container .new {
   margin-bottom: 5%;
@@ -46,4 +46,23 @@ main .new-container .new .image-container img {
 main .new-container .new .new-body {
   width: 50%;
   font-size: 16px;
+}
+main .new-container .new .back-news-list-button {
+  position: relative;
+  bottom: 10px;
+  left: 42%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: solid 2px #4f4f4f;
+  border-radius: 15px;
+  padding: 5px;
+  background-color: rgba(79, 79, 79, 0.1882352941);
+  color: #000000;
+  font-weight: bold;
+  transition: 0.5s;
+}
+main .new-container .new .back-news-list-button:hover {
+  color: #f5f5f5;
+  background-color: #4f4f4f;
 }/*# sourceMappingURL=newDetail.css.map */

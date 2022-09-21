@@ -41,10 +41,6 @@ const { urlencoded } = require("express");
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// Para los formulatios POST
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }))
-
 // Para los formularios PUT y DELETE
 app.use(methodOverride('_method'));
 

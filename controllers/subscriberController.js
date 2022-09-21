@@ -37,11 +37,10 @@ const subscriberController = {
             let allSubscribers = await Subscriber.findAll()
             let arrSubscribers = allSubscribers.map(element => element.dataValues.email)
             
-            console.log(req.body)
-            
             let affair = req.body.affair
             let title = req.body.title
             let message = req.body.message
+            let introduction = req.body.introduction
         
         
             // create reusable transporter object using the default SMTP transport
@@ -61,7 +60,7 @@ const subscriberController = {
                 to: arrSubscribers, // list of receivers
                 subject: affair, // Subject line
                 html: 
-                `<div><h1>${title}</h1><p>${message}</p></div>`, // html body
+                `<div><h1>${title}</h1><p>${introduction}</p><br/><p>${message}</p></div>`, // html body
             });
             res.send('mensaje enviado ')
         } catch (error) {
@@ -73,3 +72,4 @@ const subscriberController = {
 }
 
 module.exports = subscriberController;
+

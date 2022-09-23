@@ -7,20 +7,23 @@
         <%- include ('partials/header') %>
 
         <main>
-            <form method="POST" action="/subs/emails">
-                <label for="affair">ASUNTO:</label>
-                <input name="affair" value="" type="text" required>
+            <form method="POST" action="/subs/emails" class="news-form-container">
+                <legend class="legend-news-form"><p>Mandando Email</p><i class="fa-solid fa-pen-to-square"></i></legend>
+                <label for="affair" class="label-news-form">ASUNTO:</label>
+                <input name="affair" value="" type="text" class="input-news-form" placeholder="" required>
         
-                <label for="title">TITULO DE LA NOTICIA:</label>
-                <input name="title" type="text" required>
+                <label for="title" class="label-news-form">TITULO DE LA NOTICIA:</label>
+                <input name="title" type="text" class="input-news-form" placeholder=""  required>
         
-                <label for="introduction">INTRODUCCION:</label>
-                <textarea type="textarea" name="introduction" id="message" required></textarea>
+                <label for="introduction" class="label-news-form">INTRODUCCION:</label>
+                <textarea type="textarea" name="introduction" id="message" class="input-news-form" placeholder=""  required></textarea>
         
-                <label for="message">MENSAJE:</label>
-                <textarea type="textarea" name="message" id="message" required></textarea>
-        
-                <button type="submit">Enviar</button>
+                <label for="message" class="label-news-form">MENSAJE:</label>
+                <textarea type="textarea" name="message" id="message" class="input-news-form" placeholder=""  required></textarea>
+                <div class="create-sponsor-buttons">
+                    <button type="submit" class="button-create-news submit-button-news-form"><i class="fa-solid fa-check"></i>Enviar</button>
+                    <button type="reset" class="button-delete-news cancel-changes-sponsor-form"><i class="fa-solid fa-trash-can"></i>Deshacer</button>
+                </div>
             </form>
         </main>
     </body>

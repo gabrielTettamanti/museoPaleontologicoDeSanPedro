@@ -12,8 +12,7 @@ subsRouter.get('/', adminMiddleware, subscriberController.list);
 //***** Creating a new subscriber *****/
 subsRouter.post('/add', subscriberController.store);
 
-subsRouter.get('/emails', subscriberController.emails);
-
+subsRouter.get('/emails', adminMiddleware, subscriberController.emails);
 subsRouter.post('/emails', subscriberController.send);
 
 module.exports = subsRouter;

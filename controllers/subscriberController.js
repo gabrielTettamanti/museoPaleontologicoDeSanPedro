@@ -29,7 +29,8 @@ const subscriberController = {
     },
 
     emails: (req, res) => {
-        res.render('emails')
+        let adminLogged = !req.session.userAdmin == false
+        res.render('emails', { adminLogged })
     },
 
     send: async (req, res) => {

@@ -29,7 +29,7 @@
   font-size: 14px;
   font-family: sans-serif;
   margin-bottom: 0;
-  padding: 1%;
+  padding: 15px 15px 2px 15px;
 }
 .containerRoute .signTxtImg .imgHistory {
   display: none;
@@ -47,7 +47,7 @@
     float: right;
     border-radius: 10px;
     width: 250px;
-    margin: 25px 15px;
+    margin: 1px 15px 1px 15px;
   }
   .containerRoute .signTxtImg .historyLeft {
     float: left;
@@ -55,6 +55,6 @@
 }
 @media (min-width: 1900px) {
   .containerRoute .signTxtImg p {
-    font-size: 18px;
+    font-size: 19px;
   }
 }/*# sourceMappingURL=museumTour.css.map */

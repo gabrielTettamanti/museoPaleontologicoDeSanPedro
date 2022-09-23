@@ -63,7 +63,7 @@ const subscriberController = {
                 html: 
                 `<div><h1>${title}</h1><p>${introduction}</p><br/><p>${message}</p></div>`, // html body
             });
-            res.send('mensaje enviado ')
+            res.redirect('/admin')
         } catch (error) {
             console.log(error)
             res.send('No se envio el mensaje')

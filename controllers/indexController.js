@@ -22,7 +22,6 @@ const indexController = {
                 status: 1
             }
         })
-        console.log("Hi")
         Promise.all([news, sponsors])
             .then(([dataNews, dataSponsors]) => {
                 res.render("index", { listaSponsors: dataSponsors, news :  dataNews, adminLogged });

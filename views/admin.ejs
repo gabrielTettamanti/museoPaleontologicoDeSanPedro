@@ -6,7 +6,7 @@
 
     <%- include ('partials/header') %>
 
-    <main id="fullPage">
+    <main>
         <% if (locals.logged) { %>
             <div class="admin-logged-view">
                     <div>
@@ -18,6 +18,39 @@
                     <form action="/admin/logout" method="post">
                         <button class="admin-options" id="logout-button" type="submit">Cerrar Session <i class="fa-solid fa-door-open"></i></button>
                     </form>
+            </div>
+            <div class="container-list-admin">
+                <legend class="legend-list-admin">Lista de noticias</legend>
+                <% newsList.forEach(e => { %>
+                    <div class="index-list-admin">
+                        <a class="title-list-admin" href="/news/edit/<%= e.id %>">
+                            <%= e.title %> - 
+                            <%= e.status == 1 ? 'Visible' : 'No visible'%>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="container-list-admin">
+                <legend class="legend-list-admin">Lista de sponsors</legend>
+                <% sponsorsList.forEach(e => { %>
+                    <div class="index-list-admin">
+                        <a class="title-list-admin" href="/sponsors/edit/<%= e.id %>">
+                            <%= e.name %> - 
+                            <%= e.status == 1 ? 'Visible' : 'No visible'%>
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="container-list-admin">
+                <legend class="legend-list-admin">Lista de administradores</legend>
+                <% adminList.forEach(e => { %>
+                    <div class="index-list-admin">
+                        <a class="title-list-admin" href="/admin/update/<%= e.id %>">
+                            <%= e.email %> - 
+                            <%= e.status == 1 ? 'Con permisos' : 'Sin permisos'%>
+                        </a>
+                    </div>
+                <% }) %>
             </div>
         <% } else { %>
             <div class="section" id="adminLogin">

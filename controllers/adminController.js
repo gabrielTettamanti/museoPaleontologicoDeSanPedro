@@ -16,7 +16,15 @@ const adminController = {
     admin: (req, res) => {
         let adminLogged = !req.session.userAdmin == false
         res.locals.logged = req.session.userAdmin ? true : false
-        res.render("admin", { adminLogged });
+
+        const newsList = DB.Noticia.findAll()
+        const sponsorsList = DB.Sponsor.findAll()
+        const adminList = DB.Admin.findAll()
+
+        Promise.all([newsList, sponsorsList, adminList])
+        .then(([newsList, sponsorsList, adminList]) => {
+            res.render("admin", { newsList, sponsorsList, adminList, adminLogged });
+        })
     },
 
     logout: (req, res) => {

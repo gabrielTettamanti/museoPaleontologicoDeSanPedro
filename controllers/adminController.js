@@ -140,7 +140,7 @@ const adminController = {
                 if(bcrypt.compareSync(password, admin.password)) {
                     req.session.userAdmin = admin.dataValues;
                     res.locals.logged = true
-                    res.redirect('/');
+                    res.redirect('/admin');
                 }
             } 
             res.render('admin');

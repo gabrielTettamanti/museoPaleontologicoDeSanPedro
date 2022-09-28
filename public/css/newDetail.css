@@ -7,7 +7,6 @@ body {
 
 main {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 main .new-container {
   display: flex;

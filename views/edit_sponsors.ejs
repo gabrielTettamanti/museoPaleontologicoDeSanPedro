@@ -9,11 +9,16 @@
                     <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
                     <label for="name" class="label-news-form">Nombre: </label>
                     <input type="text" name="name" value="<%= sponsor.name %>" class="input-news-form" placeholder="Nombre">
-                    <label for="status" class="label-news-form">Status: </label>
-                    <input type="text" name="status" value="<%= sponsor.status %>" class="input-news-form" placeholder="Status">
                     <label for="img" class="label-news-form">Imagen: </label>
                     <img src="/img/sponsors/<%= sponsor.img %> " class="editarImagen">
                     <input type="file" name="img" value="<%= sponsor.img %> " accept=".jpg, .png, .jpeg, .webp" class="input-news-form img-input">
+                    <label for="status" class="label-news-form">Estado: </label>
+                    <div class="status-radio-form">
+                        <input type="radio" name="status" class="status-radio-form" id="status-off" value="0" <%= sponsor.status == 0 ? 'checked' : null %> >
+                        <label for="status-off">No visible</label>
+                        <input type="radio" name="status" class="status-radio-form" id="status-on" value="1" <%= sponsor.status == 1 ? 'checked' : null %>>
+                        <label for="status-on">Visible</label>
+                    </div>
                     <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Editar</button>
                 </form>
         </main>

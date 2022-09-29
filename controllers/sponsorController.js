@@ -61,7 +61,7 @@ const sponsorController = {
                         id: sponsorId
                     }
                 })
-        .then((sponsor) => res.redirect('/sponsors/detail/'+ sponsorId))
+        .then((sponsor) => res.redirect('/admin'))
         .catch(err => console.log(err))
     }
 }

@@ -15,8 +15,13 @@
                     <textarea name="text" class="input-news-form detail-input-news-form" rows="5" cols="100" placeholder="Detalle"><%= noticia.text %></textarea>
                     <label for="img" class="label-news-form">Subir Imagen: </label>
                     <input type="file" name="img" accept=".jpg, .png" class="input-news-form img-input">
-                    <label for="status" class="label-news-form">Status: </label>
-                    <input type="number" name="status" value="<%= noticia.status %>" class="input-news-form" placeholder="Status">
+                    <label for="status" class="label-news-form">Estado: </label>
+                    <div class="status-radio-form">
+                        <input type="radio" name="status" class="status-radio-form" id="status-off" value="0" <%= noticia.status == 0 ? 'checked' : null %> >
+                        <label for="status-off">No visible</label>
+                        <input type="radio" name="status" class="status-radio-form" id="status-on" value="1" <%= noticia.status == 1 ? 'checked' : null %>>
+                        <label for="status-on">Visible</label>
+                    </div>
                     <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
                 </form>
         </main>

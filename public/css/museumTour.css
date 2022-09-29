@@ -2,7 +2,7 @@
   background-image: url(../img/IMG_20220401_174914684.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 110%;
+  background-size: cover;
 }
 
 /*Main styles*/
@@ -36,6 +36,9 @@
 }
 
 @media (min-width: 1020px) {
+  .bodyMuseumTour {
+    background-size: 120%;
+  }
   .containerRoute .signTxtImg {
     padding: 10px 5px;
   }

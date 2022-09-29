@@ -7,7 +7,7 @@
   background-image: url(../img/fotofondoPrueba.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 110%;
+  background-size: cover;
 }
 
 #adminLogin {
@@ -165,4 +165,10 @@
   color: #f5f5f5;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
+}
+
+@media (min-width: 1020px) {
+  .bodyAdmin {
+    background-size: 120%;
+  }
 }/*# sourceMappingURL=admin.css.map */

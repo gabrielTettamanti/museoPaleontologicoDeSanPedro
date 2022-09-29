@@ -2,7 +2,7 @@
   background-image: url(../img/fotofondoPrueba.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 110%;
+  background-size: cover;
 }
 
 /* primera parte del home */
@@ -38,5 +38,10 @@ div.parteUnoHome h1.nombreDelMuseo {
 @media (min-width: 425px) {
   .sponsorsContainer img {
     width: 30%;
+  }
+}
+@media (min-width: 1020px) {
+  .bodyIndex {
+    background-size: 120%;
   }
 }/*# sourceMappingURL=index.css.map */

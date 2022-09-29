@@ -2,7 +2,7 @@
   background-image: url(../img/countrysideVisit.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 110%;
+  background-size: cover;
 }
 
 .containerFossilization {
@@ -45,6 +45,11 @@
   .containerFossilization .fossilizationCard {
     width: 350px;
     margin-top: 70px;
+  }
+}
+@media (min-width: 1020px) {
+  .bodyCountrysideVisit {
+    background-size: 120%;
   }
 }
 @media (min-width: 1440px) {

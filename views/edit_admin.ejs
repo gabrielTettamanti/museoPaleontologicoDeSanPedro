@@ -12,6 +12,13 @@
             <input type="password" name="password" value="" class="input-news-form" placeholder="********">
             <label for="password-confirm" class="label-news-form">Confirmar contraseña: </label>
             <input type="password" name="password-confirm" value="" class="input-news-form" placeholder="********">
+            <label for="status" class="label-news-form">Estado: </label>
+                    <div class="status-radio-form">
+                        <input type="radio" name="status" class="status-radio-form" id="status-off" value="0" <%= admin.status == 0 ? 'checked' : null %> >
+                        <label for="status-off">Sin permisos</label>
+                        <input type="radio" name="status" class="status-radio-form" id="status-on" value="1" <%= admin.status == 1 ? 'checked' : null %>>
+                        <label for="status-on">Con permisos</label>
+                    </div>
             <button type="submit" class="submit-button-news-form"><i class="fa-solid fa-check"></i> Guardar</button>
         </form>
     </main>

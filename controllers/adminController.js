@@ -90,7 +90,8 @@ const adminController = {
         const adminId = req.params.id;
         const adminUpdated = {
             password: passwordEncrypted,
-            password_conf: passwordEncrypted
+            password_conf: passwordEncrypted,
+            status: req.body.status
         }
         Admin.update(adminUpdated, {
             where: {id: adminId}

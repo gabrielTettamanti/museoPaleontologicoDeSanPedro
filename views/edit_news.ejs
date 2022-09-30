@@ -3,10 +3,12 @@
 <%- include ('partials/head') %>
 
     <body class="bodyAdmin">
+
+        <%- include ('partials/header') %>
+    
         <main id="fullPage">
                 <form method="POST" action="/news/edit/<%= noticia.id %>?_method=PUT" enctype="multipart/form-data" class="news-form-container">
                     <legend class="legend-news-form"><p>Editando Noticia</p><i class="fa-solid fa-pen-to-square"></i></legend>
-                    <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
                     <label for="title" class="label-news-form">Titulo: </label>
                     <input type="text" name="title" value="<%= noticia.title %>" class="input-news-form" placeholder="Título">
                     <label for="date" class="label-news-form">Fecha: </label>

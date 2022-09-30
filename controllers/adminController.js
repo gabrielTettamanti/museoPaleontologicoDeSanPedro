@@ -78,10 +78,11 @@ const adminController = {
     },
 
     editForm: (req, res) => {
+        let adminLogged = !req.session.userAdmin == false
         let adminId = req.params.id;
         Admin.findByPk(adminId)
         .then(admin => {
-            res.render('edit_admin', { admin });
+            res.render('edit_admin', { admin, adminLogged });
         })
     },
 

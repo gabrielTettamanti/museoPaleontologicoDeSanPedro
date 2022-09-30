@@ -63,9 +63,10 @@ const newsController = {
 
     },
     editar: (req, res) => {
+        let adminLogged = !req.session.userAdmin == false
         New.findByPk(req.params.id)
             .then(noticia => {
-                res.render('edit_news', {noticia})
+                res.render('edit_news', {noticia, adminLogged})
             })
             .catch(err => {
                 res.send(err)

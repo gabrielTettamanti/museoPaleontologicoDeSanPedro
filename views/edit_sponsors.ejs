@@ -6,7 +6,6 @@
         <main id="fullPage">
                 <form method="POST" action="/sponsors/edit/<%= sponsor.id %>" enctype="multipart/form-data" class="news-form-container">
                     <legend class="legend-news-form"><p>Editar Sponsor</p><i class="fa-solid fa-pen-to-square"></i></legend>
-                    <a href="http://localhost:8000/news/list/?" class="cancel-changes-news-form"><i class="fa-solid fa-xmark"></i></a>
                     <label for="name" class="label-news-form">Nombre: </label>
                     <input type="text" name="name" value="<%= sponsor.name %>" class="input-news-form" placeholder="Nombre">
                     <label for="img" class="label-news-form">Imagen: </label>

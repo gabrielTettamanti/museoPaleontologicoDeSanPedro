@@ -33,8 +33,12 @@ const adminController = {
     },
 
     createForm: (req, res) => {
-        let adminLogged = !req.session.userAdmin == false
-        res.render('create_admin', { adminLogged });
+        if(req.session.userAdmin.id != 1 && req.session.userAdmin.id != 2){
+            return res.redirect('/admin');
+        } else {
+            let adminLogged = !req.session.userAdmin == false
+            res.render('create_admin', { adminLogged });
+        }
     },
 
     create: (req, res) => {

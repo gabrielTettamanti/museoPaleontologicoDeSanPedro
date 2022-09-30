@@ -25,7 +25,7 @@
                     <% newsList.reverse().forEach(e => { %>
                         <div class="index-list-admin">
                             <a class="title-list-admin" href="/news/edit/<%= e.id %>">
-                                <%= e.title %> - 
+                                - <%= e.title %> ||
                                 <%= e.status == 1 ? 'Visible' : 'No visible'%>
                             </a>
                         </div>
@@ -38,7 +38,7 @@
                     <% sponsorsList.reverse().forEach(e => { %>
                         <div class="index-list-admin">
                             <a class="title-list-admin" href="/sponsors/edit/<%= e.id %>">
-                                <%= e.name %> - 
+                                - <%= e.name %> ||
                                 <%= e.status == 1 ? 'Visible' : 'No visible'%>
                             </a>
                         </div>
@@ -51,7 +51,7 @@
                     <% adminList.reverse().forEach(e => { %>
                         <div class="index-list-admin">
                             <a class="title-list-admin" href="/admin/update/<%= e.id %>">
-                                <%= e.email %> - 
+                                - <%= e.email %> ||
                                 <%= e.status == 1 ? 'Con permisos' : 'Sin permisos'%>
                             </a>
                         </div>

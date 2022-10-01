@@ -1,23 +1,23 @@
 module.exports = {
   "development": {
-    "username": "sql10523230",
-    "password": 'ifvKXcaULQ',
-    "database": "sql10523230",
-    "host": "sql10.freemysqlhosting.net",
+    "username": "root",
+    "password": null,
+    "database": "museo_db",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "sql10523230",
-    "password": 'ifvKXcaULQ',
-    "database": "sql10523230",
-    "host": "sql10.freemysqlhosting.net",
+    "username": "root",
+    "password": 'secret',
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "sql10523230",
-    "password": 'ifvKXcaULQ',
-    "database": "sql10523230",
-    "host": "sql10.freemysqlhosting.net",
+    "username": "root",
+    "password": 'secret',
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }

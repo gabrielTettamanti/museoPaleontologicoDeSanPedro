@@ -50,8 +50,8 @@ const subscriberController = {
                 port: 465,
                 secure: true, // true for 465, false for other ports
                 auth: {
-                user: 'noreply.gcfsanpedro@gmail.com', // generated ethereal user
-                pass: 'dzhfeyaxvontgcvg', // generated ethereal password
+                user: '', // generated ethereal user
+                pass: '', // generated ethereal password
                 },
             });
             
